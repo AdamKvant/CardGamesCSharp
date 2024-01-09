@@ -41,6 +41,17 @@ namespace CardGamesCSharp
                 this.deck[j] = new Card(suit, value);
             }
         }
+        public void Shuffle() {
+            //Shuffle uses Fisher-Yates Shuffle Algorithm
+            Random random = new Random();
+            for (int i = deck.Length - 1; i > 0; i--) {
+                int j = random.Next(0, i + 1);
+                Card temp = deck[i];
+                deck[i] = deck[j];
+                deck[j] = temp;
+            }
+        }
+
         public override string ToString()
         {
             string str = "";
