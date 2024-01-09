@@ -8,14 +8,13 @@ namespace CardGamesCSharp
 {
     abstract class CardGame
     {
-        private Deck deck;
-        private int playerCount;
-        private Player[] players;
-        private int turn;
+        protected Deck deck;
+        protected int playerCount;
+        protected Player[] players;
+        protected int turn;
 
         protected CardGame(int players) {
             this.playerCount = players;
-            this.deck = new Deck(4);
             this.players = new Player[players];
             for (int i = 0; i < this.players.Length; i++)
             {

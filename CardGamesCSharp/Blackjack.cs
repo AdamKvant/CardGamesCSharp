@@ -10,7 +10,9 @@ namespace CardGamesCSharp
     {
 
 
-        public Blackjack(int players) : base(players) {}
+        public Blackjack(int players) : base(players) {
+            base.deck = new Deck(4);
+        }
 
         public override void run()
         {
