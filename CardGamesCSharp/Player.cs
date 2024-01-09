@@ -22,7 +22,9 @@ namespace CardGamesCSharp
         public List<Card> getHand() { return hand; }
         public int getId() { return id; }
 
-        public void setHand(List<Card> hand) { this.hand = hand; }
+        public void addCard(Card card) { hand.Add(card);}
+
+        //public void setHand(List<Card> hand) { this.hand = hand; }
 
         public override string ToString()
         {
