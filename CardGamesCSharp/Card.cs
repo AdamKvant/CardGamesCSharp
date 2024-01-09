@@ -12,6 +12,7 @@ namespace CardGamesCSharp
         private int value;
         private string dispValue;
         private string representation;
+        private int blackjackValue;
 
         public Card(char suit, int value)
         {
@@ -21,18 +22,23 @@ namespace CardGamesCSharp
             {
                 case 1:
                     this.dispValue = "A";
+                    blackjackValue = 1;
                     break;
                 case int val when val < 11:
                     this.dispValue = value.ToString();
+                    blackjackValue = val;
                     break;
                 case 11:
                     this.dispValue = "J";
+                    blackjackValue = 10;
                     break;
                 case 12:
                     this.dispValue = "Q";
+                    blackjackValue = 10;
                     break;
                 case 13:
                     this.dispValue = "K";
+                    blackjackValue = 10;
                     break;
             }
             this.representation = this.dispValue + this.suit;
@@ -53,6 +59,6 @@ namespace CardGamesCSharp
         {
             return this.representation;
         }
-
+        public int getBlackjackValue() { return this.blackjackValue; }
     }
 }

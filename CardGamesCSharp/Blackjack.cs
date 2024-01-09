@@ -8,14 +8,13 @@ namespace CardGamesCSharp
 {
     class Blackjack : CardGame
     {
-        private Deck deck;
-        private int playerCount;
-        private Player[] players;
-        private int turn;
 
 
-        public Blackjack(int players) {
-            this.playerCount = players;
+        public Blackjack(int players) : base(players) {}
+
+        public override void run()
+        {
+            throw new NotImplementedException();
         }
     }
 }
