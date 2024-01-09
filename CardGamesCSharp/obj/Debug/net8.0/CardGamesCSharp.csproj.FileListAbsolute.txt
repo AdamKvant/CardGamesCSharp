@@ -1,0 +1,14 @@
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\bin\Debug\net8.0\CardGamesCSharp.exe
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\bin\Debug\net8.0\CardGamesCSharp.deps.json
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\bin\Debug\net8.0\CardGamesCSharp.runtimeconfig.json
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\bin\Debug\net8.0\CardGamesCSharp.dll
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\bin\Debug\net8.0\CardGamesCSharp.pdb
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.AssemblyInfoInputs.cache
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.AssemblyInfo.cs
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.dll
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\refint\CardGamesCSharp.dll
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.pdb
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.genruntimeconfig.cache
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\ref\CardGamesCSharp.dll
