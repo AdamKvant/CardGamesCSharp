@@ -8,10 +8,11 @@ namespace CardGamesCSharp
 {
     class Blackjack : CardGame
     {
-
+        
 
         public Blackjack(int players) : base(players) {
             base.deck = new Deck(4);
+            base.dealer = new BlackjackDealer(deck, base.players);
         }
 
         public override void run()

@@ -43,7 +43,7 @@ namespace CardGamesCSharp
             }
             switch (gameChoice) {
                 case 0:
-                    game = new Blackjack(players);
+                    game = new Blackjack(players+1);
                     game.run();
                     break;
                     
