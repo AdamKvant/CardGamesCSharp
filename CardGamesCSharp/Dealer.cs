@@ -15,8 +15,8 @@ namespace CardGamesCSharp
             this.deck = deck;
             this.players = players;
         }
-        abstract protected void InitialDeal();
+        abstract public void InitialDeal();
 
-        abstract protected void addCardToPlayer(Player player);
+        abstract public void addCardToPlayer(Player player);
     }
 }

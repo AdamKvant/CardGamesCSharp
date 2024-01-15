@@ -12,12 +12,12 @@ namespace CardGamesCSharp
             
         }
 
-        protected override void addCardToPlayer(Player player)
+        public override void addCardToPlayer(Player player)
         {
             throw new NotImplementedException();
         }
 
-        protected override void InitialDeal()
+        public override void InitialDeal()
         {
             throw new NotImplementedException();
         }

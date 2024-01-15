@@ -15,9 +15,16 @@ namespace CardGamesCSharp
             base.dealer = new BlackjackDealer(deck, base.players);
         }
 
+        public bool isGameOver() {
+        throw new NotImplementedException();
+        }
+
         public override void run()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Dealing cards to players");
+            base.dealer.InitialDeal();
+            Console.WriteLine($"Dealer's hand:{players[playerCount-1].ToString}");
+
         }
     }
 }
