@@ -13,6 +13,7 @@ namespace CardGamesCSharp
         public Blackjack(int players) : base(players) {
             base.deck = new Deck(4);
             base.dealer = new BlackjackDealer(deck, base.players);
+            base.dealerIndex = base.playerCount-1;
         }
 
         public bool isGameOver() {
@@ -23,7 +24,8 @@ namespace CardGamesCSharp
         {
             Console.WriteLine("Dealing cards to players");
             base.dealer.InitialDeal();
-            Console.WriteLine($"Dealer's hand:{players[playerCount-1].ToString}");
+            Console.WriteLine(dealer.ToString());
+            Console.WriteLine(players[playerCount - 1].ToString());
 
         }
     }

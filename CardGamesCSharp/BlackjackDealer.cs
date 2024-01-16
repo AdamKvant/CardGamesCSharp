@@ -19,7 +19,28 @@ namespace CardGamesCSharp
 
         public override void InitialDeal()
         {
-            throw new NotImplementedException();
+            foreach (Player player in players) {
+                player.addCard(this.deck.GetCard(currentCard));
+            }
+            foreach (Player player in players)
+            {
+                player.addCard(this.deck.GetCard(currentCard));
+            }
         }
+
+        public override string ToString()
+        {
+            Player dealer = this.players[players.Length - 1];
+            string str = "Dealer's Hand: ";
+            List<Card> dealerHand = dealer.getHand();
+            for (int i = 0; i < dealer.getHand().Count; i++)
+            {
+                str += dealerHand[i].getRepresentation() + " ";
+            }
+            str += "\n";
+            return str;
+
+        }
+
     }
 }

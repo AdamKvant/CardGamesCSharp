@@ -13,6 +13,7 @@ namespace CardGamesCSharp
         protected int playerCount;
         protected Player[] players;
         protected int turn;
+        protected int dealerIndex;
 
         protected CardGame(int players) {
             this.playerCount = players;

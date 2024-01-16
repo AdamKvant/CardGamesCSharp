@@ -52,6 +52,17 @@ namespace CardGamesCSharp
             }
         }
 
+        public Card GetCard(int index) {
+            if (index >= 0 && index < size)
+            {
+                return this.deck[index];
+            }
+            else {
+                throw new IndexOutOfRangeException();
+            }
+        }
+
+
         public override string ToString()
         {
             string str = "";

@@ -36,5 +36,7 @@ namespace CardGamesCSharp
             str += "\n";
             return str;
         }
+
+
     }
 }
