@@ -12,11 +12,15 @@ namespace CardGamesCSharp
     {
         private int id;
         private List<Card> hand;
+        private bool isOut;
+        private short blackjackHandValue;
 
         public Player(int id)
         {
             this.id = id;
             hand = new List<Card>();
+            isOut = false;
+            blackjackHandValue = 0;
         }
 
         public List<Card> getHand() { return hand; }
@@ -25,6 +29,25 @@ namespace CardGamesCSharp
         public void addCard(Card card) { hand.Add(card);}
 
         //public void setHand(List<Card> hand) { this.hand = hand; }
+
+        public bool getIsOut() { return isOut; }
+
+        public void setIsOut() { isOut = true; }
+
+        public void calculateBJHandValue() {
+            blackjackHandValue = 0;
+            short aceCount = 0;
+            foreach (Card card in hand) {
+                if (card.getDispValue().Equals("A"))
+                {
+                    aceCount++;
+                }
+                else {
+                    blackjackHandValue += (short) card.getBlackjackValue();
+                }
+            }
+
+        }
 
         public override string ToString()
         {

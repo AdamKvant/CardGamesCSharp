@@ -8,16 +8,29 @@ namespace CardGamesCSharp
 {
     class Blackjack : CardGame
     {
-        
+        private bool allPlayersOut;
 
         public Blackjack(int players) : base(players) {
             base.deck = new Deck(4);
             base.dealer = new BlackjackDealer(deck, base.players);
             base.dealerIndex = base.playerCount-1;
+            allPlayersOut = false;
         }
 
         public bool isGameOver() {
         throw new NotImplementedException();
+        }
+
+        private void verifyAllPlayers() {
+            short count = 0;
+            foreach (Player player in players) {
+                if (player.getIsOut()) {
+                    count++;
+                }
+            }
+            if (count == playerCount - 1) { 
+            allPlayersOut = true;
+            }
         }
 
         public override void run()
@@ -25,8 +38,7 @@ namespace CardGamesCSharp
             Console.WriteLine("Dealing cards to players");
             base.dealer.InitialDeal();
             Console.WriteLine(dealer.ToString());
-            Console.WriteLine(players[playerCount - 1].ToString());
-
+            
         }
     }
 }
