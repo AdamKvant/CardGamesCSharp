@@ -47,6 +47,17 @@ namespace CardGamesCSharp
                 }
             }
 
+            for (int i = 0; i < aceCount; i++)
+            {
+                if (blackjackHandValue + 10 <= 21)
+                {
+                    blackjackHandValue += 10;
+                }
+                else {
+                    blackjackHandValue += 1;
+                }
+            }
+
         }
 
         public override string ToString()
