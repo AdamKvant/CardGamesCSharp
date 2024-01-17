@@ -15,6 +15,11 @@ namespace CardGamesCSharp
             base.dealer = new BlackjackDealer(deck, base.players);
             base.dealerIndex = base.playerCount-1;
             allPlayersOut = false;
+            this.players = new BlackjackPlayer[players];
+            for (int i = 0; i < this.players.Length; i++)
+            {
+                this.players[i] = new BlackjackPlayer(i);
+            }
         }
 
         public bool isGameOver() {

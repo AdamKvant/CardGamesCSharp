@@ -17,12 +17,6 @@ namespace CardGamesCSharp
 
         protected CardGame(int players) {
             this.playerCount = players;
-            this.players = new Player[players];
-            for (int i = 0; i < this.players.Length; i++)
-            {
-                this.players[i] = new Player(i);
-            }
-
             this.turn = 0;
         }
         abstract public void run();

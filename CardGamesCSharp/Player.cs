@@ -8,19 +8,17 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
-    class Player
+    abstract class Player
     {
-        private int id;
-        private List<Card> hand;
-        private bool isOut;
-        private short blackjackHandValue;
+        protected int id;
+        protected List<Card> hand;
+        protected bool isOut;
 
         public Player(int id)
         {
             this.id = id;
             hand = new List<Card>();
             isOut = false;
-            blackjackHandValue = 0;
         }
 
         public List<Card> getHand() { return hand; }
@@ -33,32 +31,6 @@ namespace CardGamesCSharp
         public bool getIsOut() { return isOut; }
 
         public void setIsOut() { isOut = true; }
-
-        public void calculateBjHandValue() {
-            blackjackHandValue = 0;
-            short aceCount = 0;
-            foreach (Card card in hand) {
-                if (card.getDispValue().Equals("A"))
-                {
-                    aceCount++;
-                }
-                else {
-                    blackjackHandValue += (short) card.getBlackjackValue();
-                }
-            }
-
-            for (int i = 0; i < aceCount; i++)
-            {
-                if (blackjackHandValue + 10 <= 21)
-                {
-                    blackjackHandValue += 10;
-                }
-                else {
-                    blackjackHandValue += 1;
-                }
-            }
-
-        }
 
         public override string ToString()
         {
