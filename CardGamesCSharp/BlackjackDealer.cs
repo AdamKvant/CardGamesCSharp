@@ -11,10 +11,12 @@ namespace CardGamesCSharp
     {
         private Player dealer;
         private List<Card> dealerHand;
+        private bool reveal;
 
         public BlackjackDealer(Deck deck, Player[] players) : base(deck,players){
             dealer = this.players[players.Length - 1];
             dealerHand = dealer.getHand();
+            reveal = false;
         }
 
         public override void addCardToPlayer(Player player)
@@ -45,11 +47,19 @@ namespace CardGamesCSharp
         public override string ToString()
         {
             string str = "Dealer's Hand: ";
-            for (int i = 0; i < dealer.getHand().Count; i++)
+            if (reveal)
             {
-                str += dealerHand[i].getRepresentation() + " ";
+                for (int i = 0; i < dealer.getHand().Count; i++)
+                {
+                    str += dealerHand[i].getRepresentation() + " ";
+                }
+                str += "\n";
             }
-            str += "\n";
+            else {
+                    str += dealerHand[0].getRepresentation() + " ";
+                str += "\n";
+            }
+            
             return str;
 
         }

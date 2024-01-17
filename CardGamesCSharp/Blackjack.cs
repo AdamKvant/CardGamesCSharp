@@ -42,6 +42,7 @@ namespace CardGamesCSharp
             foreach (Player player in players) { 
                 Console.WriteLine(player.ToString());
             }
+
         }
     }
 }
