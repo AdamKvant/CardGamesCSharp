@@ -34,7 +34,7 @@ namespace CardGamesCSharp
 
         public void setIsOut() { isOut = true; }
 
-        public void calculateBJHandValue() {
+        public void calculateBjHandValue() {
             blackjackHandValue = 0;
             short aceCount = 0;
             foreach (Card card in hand) {

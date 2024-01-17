@@ -35,10 +35,13 @@ namespace CardGamesCSharp
 
         public override void run()
         {
+            deck.Shuffle();
             Console.WriteLine("Dealing cards to players");
             base.dealer.InitialDeal();
             Console.WriteLine(dealer.ToString());
-            
+            foreach (Player player in players) { 
+                Console.WriteLine(player.ToString());
+            }
         }
     }
 }

@@ -26,19 +26,21 @@ namespace CardGamesCSharp
         {
             foreach (Player player in players) {
                 player.addCard(this.deck.GetCard(currentCard));
+                currentCard++;
             }
             foreach (Player player in players)
             {
                 player.addCard(this.deck.GetCard(currentCard));
+                currentCard++;
             }
         }
 
-        public bool dealerBust() {
+        /*public bool dealerBust() {
             short total = 0;
             foreach (Card card in dealerHand) {
                 
             }
-        }
+        }*/
 
         public override string ToString()
         {
