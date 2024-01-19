@@ -21,7 +21,8 @@ namespace CardGamesCSharp
 
         public override void addCardToPlayer(Player player)
         {
-            throw new NotImplementedException();
+            player.addCard(deck.GetCard(currentCard));
+            currentCard++;
         }
 
         public override void InitialDeal()

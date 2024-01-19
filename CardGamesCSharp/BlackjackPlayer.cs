@@ -16,6 +16,9 @@ namespace CardGamesCSharp
             blackjackHandValue = 0;
         }
 
+        
+
+
         public void calculateBjHandValue()
         {
             blackjackHandValue = 0;
