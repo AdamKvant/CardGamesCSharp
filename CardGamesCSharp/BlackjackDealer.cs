@@ -13,7 +13,8 @@ namespace CardGamesCSharp
         private List<Card> dealerHand;
         private bool reveal;
 
-        public BlackjackDealer(Deck deck, Player[] players) : base(deck,players){
+        public BlackjackDealer(Deck deck, Player[] players) : base(deck, players)
+        {
             dealer = this.players[players.Length - 1];
             dealerHand = dealer.getHand();
             reveal = false;
@@ -27,7 +28,8 @@ namespace CardGamesCSharp
 
         public override void InitialDeal()
         {
-            foreach (Player player in players) {
+            foreach (Player player in players)
+            {
                 player.addCard(this.deck.GetCard(currentCard));
                 currentCard++;
             }
@@ -56,11 +58,12 @@ namespace CardGamesCSharp
                 }
                 str += "\n";
             }
-            else {
-                    str += dealerHand[0].getRepresentation() + " ";
+            else
+            {
+                str += dealerHand[0].getRepresentation() + " ";
                 str += "\n";
             }
-            
+
             return str;
 
         }

@@ -41,10 +41,12 @@ namespace CardGamesCSharp
                 this.deck[j] = new Card(suit, value);
             }
         }
-        public void Shuffle() {
+        public void Shuffle()
+        {
             //Shuffle uses Fisher-Yates Shuffle Algorithm
             Random random = new Random();
-            for (int i = deck.Length - 1; i > 0; i--) {
+            for (int i = deck.Length - 1; i > 0; i--)
+            {
                 int j = random.Next(0, i + 1);
                 Card temp = deck[i];
                 deck[i] = deck[j];
@@ -52,12 +54,14 @@ namespace CardGamesCSharp
             }
         }
 
-        public Card GetCard(int index) {
+        public Card GetCard(int index)
+        {
             if (index >= 0 && index < size)
             {
                 return this.deck[index];
             }
-            else {
+            else
+            {
                 throw new IndexOutOfRangeException();
             }
         }

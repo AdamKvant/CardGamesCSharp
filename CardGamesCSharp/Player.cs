@@ -24,7 +24,7 @@ namespace CardGamesCSharp
         public List<Card> getHand() { return hand; }
         public int getId() { return id; }
 
-        public void addCard(Card card) { hand.Add(card);}
+        public void addCard(Card card) { hand.Add(card); }
 
         //public void setHand(List<Card> hand) { this.hand = hand; }
 
@@ -36,7 +36,8 @@ namespace CardGamesCSharp
         {
             string str = $"Player {id}\n";
             str += "Hand: ";
-            for (int i = 0; i < this.hand.Count; i++) {
+            for (int i = 0; i < this.hand.Count; i++)
+            {
                 str += this.hand[i].getRepresentation() + " ";
             }
             str += "\n";

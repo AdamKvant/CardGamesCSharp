@@ -3,8 +3,10 @@ using System.Transactions;
 
 namespace CardGamesCSharp
 {
-    class Program {
-        static void Main(string[] args) {
+    class Program
+    {
+        static void Main(string[] args)
+        {
             CardGame game;
             int gameChoice = -1;
             int players = -1;
@@ -17,11 +19,11 @@ namespace CardGamesCSharp
             string userPlayers = Console.ReadLine();
             while (gameChoice == -1 || players == -1)
             {
-                if (int.TryParse(userGame, out int result)  && (result == 0))
+                if (int.TryParse(userGame, out int result) && (result == 0))
                 {
                     gameChoice = result;
                 }
-                else 
+                else
                 {
                     Console.WriteLine("Available games: blackjack(0)");
                     Console.Write("Please enter a valid game number: ");
@@ -41,12 +43,13 @@ namespace CardGamesCSharp
                     players = -1;
                 }
             }
-            switch (gameChoice) {
+            switch (gameChoice)
+            {
                 case 0:
-                    game = new Blackjack(players+1);
+                    game = new Blackjack(players + 1);
                     game.run();
                     break;
-                    
+
             }
 
 

@@ -10,7 +10,8 @@ namespace CardGamesCSharp
     {
         private bool allPlayersOut;
 
-        public Blackjack(int players) : base(players) {
+        public Blackjack(int players) : base(players)
+        {
             base.deck = new Deck(4);
             allPlayersOut = false;
             this.players = new BlackjackPlayer[players];
@@ -22,19 +23,24 @@ namespace CardGamesCSharp
             base.dealerIndex = base.playerCount - 1;
         }
 
-        public bool isGameOver() {
-        throw new NotImplementedException();
+        public bool isGameOver()
+        {
+            throw new NotImplementedException();
         }
 
-        private void verifyAllPlayers() {
+        private void verifyAllPlayers()
+        {
             short count = 0;
-            foreach (Player player in players) {
-                if (player.getIsOut()) {
+            foreach (Player player in players)
+            {
+                if (player.getIsOut())
+                {
                     count++;
                 }
             }
-            if (count == playerCount - 1) { 
-            allPlayersOut = true;
+            if (count == playerCount - 1)
+            {
+                allPlayersOut = true;
             }
         }
 
@@ -45,11 +51,14 @@ namespace CardGamesCSharp
             Console.WriteLine("Dealing cards to players");
             base.dealer.InitialDeal();
             Console.WriteLine(dealer.ToString());
-            foreach (Player player in players) { 
+            foreach (Player player in players)
+            {
                 Console.WriteLine(player.ToString());
             }
-            while (!allPlayersOut) {
-                for (int i = 0; i < this.players.Length - 1; i++) {
+            while (!allPlayersOut)
+            {
+                for (int i = 0; i < this.players.Length - 1; i++)
+                {
                     Console.WriteLine(dealer.ToString());
                     Console.WriteLine(this.players[i].ToString());
                     Console.WriteLine("Do you want to hit(0) or stay(1)?");
@@ -63,8 +72,10 @@ namespace CardGamesCSharp
                     {
                         Console.WriteLine(this.players[i].ToString());
                     }
-                    else {
-                        while (result > 1 && result < 0) {
+                    else
+                    {
+                        while (result > 1 && result < 0)
+                        {
                             Console.WriteLine("Please type 0 to hit, or 1 to stay");
                             choice = Console.ReadLine();
                             if (int.TryParse(choice, out result) && result == 0)

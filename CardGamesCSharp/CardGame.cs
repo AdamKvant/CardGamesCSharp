@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CardGamesCSharp
 {
     abstract class CardGame
-    {   
+    {
         protected Dealer dealer;
         protected Deck deck;
         protected int playerCount;
@@ -15,7 +15,8 @@ namespace CardGamesCSharp
         protected int turn;
         protected int dealerIndex;
 
-        protected CardGame(int players) {
+        protected CardGame(int players)
+        {
             this.playerCount = players;
             this.turn = 0;
         }
