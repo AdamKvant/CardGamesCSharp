@@ -44,6 +44,8 @@ namespace CardGamesCSharp
             return str;
         }
 
+        abstract public short getBlackjackHandValue();
+        abstract public void calculateBjHandValue();
 
     }
 }

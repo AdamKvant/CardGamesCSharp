@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
-    
-    class BlackjackPlayer : Player 
+
+    class BlackjackPlayer : Player
     {
 
         private short blackjackHandValue;
@@ -16,10 +16,22 @@ namespace CardGamesCSharp
             blackjackHandValue = 0;
         }
 
-        
+        public override string ToString()
+        {
+            string str = $"Player {id + 1}\n";
+            str += "Hand: ";
+            for (int i = 0; i < this.hand.Count; i++)
+            {
+                str += this.hand[i].getRepresentation() + " ";
+            }
+            str += "\n";
+            return str;
+        }
+
+        public override short getBlackjackHandValue() { return blackjackHandValue; }
 
 
-        public void calculateBjHandValue()
+        public override void calculateBjHandValue()
         {
             blackjackHandValue = 0;
             short aceCount = 0;

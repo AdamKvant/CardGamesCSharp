@@ -14,10 +14,10 @@ namespace CardGamesCSharp
         {
             base.deck = new Deck(4);
             allPlayersOut = false;
-            this.players = new BlackjackPlayer[players];
+            base.players = new BlackjackPlayer[players];
             for (int i = 0; i < this.players.Length; i++)
             {
-                this.players[i] = new BlackjackPlayer(i);
+                base.players[i] = new BlackjackPlayer(i);
             }
             base.dealer = new BlackjackDealer(deck, base.players);
             base.dealerIndex = base.playerCount - 1;
@@ -45,7 +45,7 @@ namespace CardGamesCSharp
         }
 
         public override void run()
-        {
+        { bool continueHit = true;
             int result = -1;
             deck.Shuffle();
             Console.WriteLine("Dealing cards to players");
@@ -59,18 +59,24 @@ namespace CardGamesCSharp
             {
                 for (int i = 0; i < this.players.Length - 1; i++)
                 {
+                    continueHit = true;
+                    players[i].calculateBjHandValue();
+                    while (continueHit && players[i].getBlackjackHandValue() <= 21) { 
                     Console.WriteLine(dealer.ToString());
                     Console.WriteLine(this.players[i].ToString());
                     Console.WriteLine("Do you want to hit(0) or stay(1)?");
                     string choice = Console.ReadLine();
+
                     if (int.TryParse(choice, out result) && result == 0)
                     {
                         dealer.addCardToPlayer(this.players[i]);
                         Console.WriteLine(this.players[i].ToString());
+                        players[i].calculateBjHandValue();
                     }
                     else if (int.TryParse(choice, out result) && result == 1)
                     {
                         Console.WriteLine(this.players[i].ToString());
+                        continueHit = false;
                     }
                     else
                     {
@@ -82,14 +88,27 @@ namespace CardGamesCSharp
                             {
                                 dealer.addCardToPlayer(this.players[i]);
                                 Console.WriteLine(this.players[i].ToString());
-                            }
+                                players[i].calculateBjHandValue();
+                                }
                             else if (int.TryParse(choice, out result) && result == 1)
                             {
                                 Console.WriteLine(this.players[i].ToString());
+                                continueHit = false;
                             }
                         }
                     }
                 }
+                    if (players[i].getBlackjackHandValue() > 21) {
+                        Console.WriteLine($"Player {i + 1} busts");
+                        players[i].setIsOut();
+                        dispBuffer();
+                    }
+                    else { 
+                        Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
+                        dispBuffer();
+                         }
+                }
+                verifyAllPlayers();
             }
 
         }

@@ -20,6 +20,12 @@ namespace CardGamesCSharp
             this.playerCount = players;
             this.turn = 0;
         }
+        public static void dispBuffer() {
+            for (int j = 0; j < 3; j++)
+            {
+                Console.WriteLine();
+            }
+        }
         abstract public void run();
     }
 }
