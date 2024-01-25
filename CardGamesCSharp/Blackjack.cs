@@ -9,17 +9,18 @@ namespace CardGamesCSharp
     class Blackjack : CardGame
     {
         private bool allPlayersOut;
+        protected BlackjackPlayer[] players;
 
         public Blackjack(int players) : base(players)
         {
             base.deck = new Deck(4);
             allPlayersOut = false;
-            base.players = new BlackjackPlayer[players];
+            this.players = new BlackjackPlayer[players];
             for (int i = 0; i < this.players.Length; i++)
             {
-                base.players[i] = new BlackjackPlayer(i);
+                this.players[i] = new BlackjackPlayer(i);
             }
-            base.dealer = new BlackjackDealer(deck, base.players);
+            base.dealer = new BlackjackDealer(deck, this.players);
             base.dealerIndex = base.playerCount - 1;
         }
 

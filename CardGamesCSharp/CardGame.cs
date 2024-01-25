@@ -11,7 +11,6 @@ namespace CardGamesCSharp
         protected Dealer dealer;
         protected Deck deck;
         protected int playerCount;
-        protected Player[] players;
         protected int turn;
         protected int dealerIndex;
 

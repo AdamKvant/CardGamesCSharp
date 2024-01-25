@@ -28,10 +28,10 @@ namespace CardGamesCSharp
             return str;
         }
 
-        public override short getBlackjackHandValue() { return blackjackHandValue; }
+        public short getBlackjackHandValue() { return blackjackHandValue; }
 
 
-        public override void calculateBjHandValue()
+        public void calculateBjHandValue()
         {
             blackjackHandValue = 0;
             short aceCount = 0;
