@@ -8,11 +8,10 @@ namespace CardGamesCSharp
 {
     abstract class CardGame
     {
-        protected Dealer dealer;
+ 
         protected Deck deck;
         protected int playerCount;
         protected int turn;
-        protected int dealerIndex;
 
         protected CardGame(int players)
         {

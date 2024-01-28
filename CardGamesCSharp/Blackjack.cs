@@ -10,6 +10,9 @@ namespace CardGamesCSharp
     {
         private bool allPlayersOut;
         protected BlackjackPlayer[] players;
+        protected BlackjackDealer dealer;
+        protected int dealerIndex;
+        protected BlackjackPlayer dealerPlayer;
 
         public Blackjack(int players) : base(players)
         {
@@ -20,8 +23,9 @@ namespace CardGamesCSharp
             {
                 this.players[i] = new BlackjackPlayer(i);
             }
-            base.dealer = new BlackjackDealer(deck, this.players);
-            base.dealerIndex = base.playerCount - 1;
+            this.dealer = new BlackjackDealer(deck, this.players);
+            dealerIndex = base.playerCount - 1;
+            this.dealerPlayer = this.players[dealerIndex];
         }
 
         public bool isGameOver()
@@ -50,14 +54,15 @@ namespace CardGamesCSharp
             int result = -1;
             deck.Shuffle();
             Console.WriteLine("Dealing cards to players");
-            base.dealer.InitialDeal();
+            this.dealer.InitialDeal();
             Console.WriteLine(dealer.ToString());
             foreach (Player player in players)
             {
                 Console.WriteLine(player.ToString());
             }
-            while (!allPlayersOut)
-            {
+            for (int i = 0; i < 8; i++) {
+                dispBuffer();
+            }
                 for (int i = 0; i < this.players.Length - 1; i++)
                 {
                     continueHit = true;
@@ -109,8 +114,19 @@ namespace CardGamesCSharp
                         dispBuffer();
                          }
                 }
-                verifyAllPlayers();
+            dealer.updateReveal();
+            Console.WriteLine("Dealer revealing cards:");
+            Console.WriteLine(dealer);
+            dealerPlayer.calculateBjHandValue();
+            if (dealerPlayer.getBlackjackHandValue() < 17) {
+                Console.WriteLine("Dealer is under 17, drawing another card");
+                dealer.addCardToPlayer(dealerPlayer);
+                Console.WriteLine(dealer);
             }
+            
+            
+                
+            
 
         }
     }

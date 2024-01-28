@@ -39,6 +39,10 @@ namespace CardGamesCSharp
                 currentCard++;
             }
         }
+        public List<Card> getHand() { return dealerHand; }
+        public void updateReveal() {
+        reveal = true;
+        }
 
         /*public bool dealerBust() {
             short total = 0;
