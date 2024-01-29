@@ -118,10 +118,11 @@ namespace CardGamesCSharp
             Console.WriteLine("Dealer revealing cards:");
             Console.WriteLine(dealer);
             dealerPlayer.calculateBjHandValue();
-            if (dealerPlayer.getBlackjackHandValue() < 17) {
+            while (dealerPlayer.getBlackjackHandValue() < 17) {
                 Console.WriteLine("Dealer is under 17, drawing another card");
                 dealer.addCardToPlayer(dealerPlayer);
                 Console.WriteLine(dealer);
+                dealerPlayer.calculateBjHandValue();
             }
             
             
