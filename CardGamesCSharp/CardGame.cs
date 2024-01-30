@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
+    /*
+     * @brief the abstract class CardGame contains the base functionality
+     * needed for all card games that are implemented throughout this project.
+     */
     abstract class CardGame
     {
  
