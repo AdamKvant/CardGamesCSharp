@@ -7,18 +7,20 @@ using System.Threading.Tasks;
 namespace CardGamesCSharp
 {
     /**
-     * @brief the abstract class CardGame contains the base functionality
+     * @brief The abstract class CardGame contains the base functionality
      * needed for all card games that are implemented throughout this project.
+     * This class contains a Deck, player count, and turn number.
      */
     abstract class CardGame
     {
- 
+
         protected Deck deck;
         protected int playerCount;
         protected int turn;
 
         /**
-         * @brief Constructor for Cardgame class
+         * @brief Constructor for Cardgame class, this.playerCount is set to the parameter players.
+         * The class variable this.turn is assigned 0. 
          * @param players is an int representing the total number of players.
          * */
         protected CardGame(int players)
@@ -26,12 +28,22 @@ namespace CardGamesCSharp
             this.playerCount = players;
             this.turn = 0;
         }
-        public static void dispBuffer() {
+
+        /**
+         * @brief The function dispBuffer writes 3 newlines on the screen which allows text in the terminal to be sent off the visible screen.
+         */
+        public static void dispBuffer()
+        {
             for (int j = 0; j < 3; j++)
             {
                 Console.WriteLine();
             }
         }
+
+        /**
+         * @brief The run function is declared in subclasses of CardGame.
+         * The main game logic for each game happens in the run function.
+         */
         abstract public void run();
     }
 }

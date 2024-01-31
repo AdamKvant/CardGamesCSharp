@@ -11,6 +11,8 @@ var NAVTREEINDEX0 =
 "class_card_games_c_sharp_1_1_card.html":[1,0,0,3],
 "class_card_games_c_sharp_1_1_card_game.html":[0,0,0,4],
 "class_card_games_c_sharp_1_1_card_game.html":[1,0,0,4],
+"class_card_games_c_sharp_1_1_card_game.html#a238e8b7585f8f8f1447a7c9a4152a4fd":[0,0,0,4,1],
+"class_card_games_c_sharp_1_1_card_game.html#a238e8b7585f8f8f1447a7c9a4152a4fd":[1,0,0,4,1],
 "class_card_games_c_sharp_1_1_card_game.html#a4dfec62f6e1f6ef98802b26f41dd3c28":[0,0,0,4,0],
 "class_card_games_c_sharp_1_1_card_game.html#a4dfec62f6e1f6ef98802b26f41dd3c28":[1,0,0,4,0],
 "class_card_games_c_sharp_1_1_dealer.html":[0,0,0,5],

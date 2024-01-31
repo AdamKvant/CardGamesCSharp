@@ -102,7 +102,7 @@ $(function(){initNavTree('class_card_games_c_sharp_1_1_card_game.html',''); init
 </div><!--header-->
 <div class="contents">
 
-<p>the abstract class CardGame contains the base functionality needed for all card games that are implemented throughout this project.  
+<p>The abstract class CardGame contains the base functionality needed for all card games that are implemented throughout this project. This class contains a Deck, player count, and turn number.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for CardGamesCSharp.CardGame:</div>
@@ -118,18 +118,20 @@ Inheritance diagram for CardGamesCSharp.CardGame:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a238e8b7585f8f8f1447a7c9a4152a4fd" id="r_a238e8b7585f8f8f1447a7c9a4152a4fd"><td class="memItemLeft" align="right" valign="top"><a id="a238e8b7585f8f8f1447a7c9a4152a4fd" name="a238e8b7585f8f8f1447a7c9a4152a4fd"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
+<tr class="memdesc:a238e8b7585f8f8f1447a7c9a4152a4fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The run function is declared in subclasses of CardGame. The main game logic for each game happens in the run function. <br /></td></tr>
 <tr class="separator:a238e8b7585f8f8f1447a7c9a4152a4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa9b570e47de436d5d3bfeaa2e5ec8126" id="r_aa9b570e47de436d5d3bfeaa2e5ec8126"><td class="memItemLeft" align="right" valign="top"><a id="aa9b570e47de436d5d3bfeaa2e5ec8126" name="aa9b570e47de436d5d3bfeaa2e5ec8126"></a>
 static void&#160;</td><td class="memItemRight" valign="bottom"><b>dispBuffer</b> ()</td></tr>
+<tr class="memdesc:aa9b570e47de436d5d3bfeaa2e5ec8126"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function dispBuffer writes 3 newlines on the screen which allows text in the terminal to be sent off the visible screen. <br /></td></tr>
 <tr class="separator:aa9b570e47de436d5d3bfeaa2e5ec8126"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a4dfec62f6e1f6ef98802b26f41dd3c28" id="r_a4dfec62f6e1f6ef98802b26f41dd3c28"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dfec62f6e1f6ef98802b26f41dd3c28">CardGame</a> (int players)</td></tr>
-<tr class="memdesc:a4dfec62f6e1f6ef98802b26f41dd3c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Cardgame class.  <br /></td></tr>
+<tr class="memdesc:a4dfec62f6e1f6ef98802b26f41dd3c28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for Cardgame class, this.playerCount is set to the parameter players. The class variable this.turn is assigned 0.  <br /></td></tr>
 <tr class="separator:a4dfec62f6e1f6ef98802b26f41dd3c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -145,7 +147,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>turn</b></td></tr>
 <tr class="separator:aabc4c4604118dfcf8b2112a921c820c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>the abstract class CardGame contains the base functionality needed for all card games that are implemented throughout this project. </p>
+<div class="textblock"><p>The abstract class CardGame contains the base functionality needed for all card games that are implemented throughout this project. This class contains a Deck, player count, and turn number. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4dfec62f6e1f6ef98802b26f41dd3c28" name="a4dfec62f6e1f6ef98802b26f41dd3c28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4dfec62f6e1f6ef98802b26f41dd3c28">&#9670;&#160;</a></span>CardGame()</h2>
@@ -170,7 +172,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>turn</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor for Cardgame class. </p>
+<p>Constructor for Cardgame class, this.playerCount is set to the parameter players. The class variable this.turn is assigned 0. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">players</td><td>is an int representing the total number of players. </td></tr>
