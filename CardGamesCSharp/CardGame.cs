@@ -17,6 +17,10 @@ namespace CardGamesCSharp
         protected int playerCount;
         protected int turn;
 
+        /*
+         * @brief Constructor for Cardgame class
+         * @param players is an int representing the total number of players.
+         * */
         protected CardGame(int players)
         {
             this.playerCount = players;
