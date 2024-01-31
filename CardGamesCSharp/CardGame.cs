@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
-    /*
+    /**
      * @brief the abstract class CardGame contains the base functionality
      * needed for all card games that are implemented throughout this project.
      */
@@ -17,7 +17,7 @@ namespace CardGamesCSharp
         protected int playerCount;
         protected int turn;
 
-        /*
+        /**
          * @brief Constructor for Cardgame class
          * @param players is an int representing the total number of players.
          * */
