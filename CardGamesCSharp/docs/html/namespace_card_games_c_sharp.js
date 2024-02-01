@@ -7,6 +7,6 @@ var namespace_card_games_c_sharp =
     [ "CardGame", "class_card_games_c_sharp_1_1_card_game.html", "class_card_games_c_sharp_1_1_card_game" ],
     [ "Dealer", "class_card_games_c_sharp_1_1_dealer.html", "class_card_games_c_sharp_1_1_dealer" ],
     [ "Deck", "class_card_games_c_sharp_1_1_deck.html", "class_card_games_c_sharp_1_1_deck" ],
-    [ "Player", "class_card_games_c_sharp_1_1_player.html", null ],
+    [ "Player", "class_card_games_c_sharp_1_1_player.html", "class_card_games_c_sharp_1_1_player" ],
     [ "Program", "class_card_games_c_sharp_1_1_program.html", null ]
 ];

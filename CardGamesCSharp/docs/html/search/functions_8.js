@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tostring_0',['ToString',['../class_card_games_c_sharp_1_1_blackjack_dealer.html#a4465d5c929aa8c7dc002c16a3bd1ea84',1,'CardGamesCSharp.BlackjackDealer.ToString()'],['../class_card_games_c_sharp_1_1_blackjack_player.html#a540de4b77729f6bd61ef68e9b977537e',1,'CardGamesCSharp.BlackjackPlayer.ToString()'],['../class_card_games_c_sharp_1_1_deck.html#a37511185399e4159d8f36b12406ba07e',1,'CardGamesCSharp.Deck.ToString()']]]
+  ['setisout_0',['setIsOut',['../class_card_games_c_sharp_1_1_player.html#a73a4268242db4d1b7471a19a93d69b5f',1,'CardGamesCSharp::Player']]],
+  ['shuffle_1',['Shuffle',['../class_card_games_c_sharp_1_1_deck.html#ae3b2865d45339d9daad8506245111f19',1,'CardGamesCSharp::Deck']]]
 ];

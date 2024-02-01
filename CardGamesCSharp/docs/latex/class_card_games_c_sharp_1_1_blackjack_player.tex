@@ -27,20 +27,23 @@ void \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Card\+Games\+CSharp.\+Player}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Player} (int id)
-\item 
-List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ {\bfseries get\+Hand} ()
-\item 
-int {\bfseries get\+Id} ()
-\item 
-void {\bfseries add\+Card} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} card)
-\item 
-bool {\bfseries get\+Is\+Out} ()
-\item 
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_player_a8c7464c8e9907cf5b0d5f2531afe8a7c}{Player}} (int id)
+\begin{DoxyCompactList}\small\item\em The Player constructor initializes the following class variables\+: ~\newline
+ this.\+id is assigned to the passed in id. ~\newline
+ this.\+hand is assigned to an empty List$<$\+Card$>$. ~\newline
+ this.\+is\+Out is assigned false. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_player_a4e6d4fb8b87b9864a65725ccb5a70753}{get\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Player\textquotesingle{}s hand. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_card_games_c_sharp_1_1_player_a0a5b01dad63bdf3798fc0f82d9e0a1d8}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Player\textquotesingle{}s id. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_card_games_c_sharp_1_1_player_a4c415cd2301ce463ab4e54f11f8a1937}{add\+Card}} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} card)
+\begin{DoxyCompactList}\small\item\em Adds the passed in Card to the Player. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_card_games_c_sharp_1_1_player_add53c464102f39afba7608619a3f6d40}{get\+Is\+Out}} ()
+\begin{DoxyCompactList}\small\item\em Returns the bool representing if the Player is still in the game. \end{DoxyCompactList}\item 
 void {\bfseries set\+Is\+Out} ()
-\item 
-string {\bfseries To\+String} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Sets is\+Out to true. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_card_games_c_sharp_1_1_player_aca8db02e704be66a5f40a6167b4f4a18}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Abstract To\+String method to be implemented by Player subclasses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Card\+Games\+CSharp.\+Player}}}
 \begin{DoxyCompactItemize}

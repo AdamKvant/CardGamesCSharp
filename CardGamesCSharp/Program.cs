@@ -3,13 +3,28 @@ using System.Transactions;
 
 namespace CardGamesCSharp
 {
+    /**
+     * @brief The Program class allows the user to pick which game they want to play,
+     * and specify the number of players.
+     */
     class Program
     {
+        /**
+         * @brief The Main function allowes the user to pick their game, and input the number of players.
+         * @param args Not used in this implementation.
+         */
         static void Main(string[] args)
         {
+            //Game instance
             CardGame game;
+
+            //Game choice
             int gameChoice = -1;
+
+            //Number of players
             int players = -1;
+
+            //Intro text
             Console.WriteLine("Adam Kvant's Card Games");
             Console.WriteLine("Available games: blackjack(0)");
             Console.Write("Enter the a number to play one of the games above: ");
@@ -17,6 +32,8 @@ namespace CardGamesCSharp
             Console.WriteLine();
             Console.Write("Enter the number of players: ");
             string userPlayers = Console.ReadLine();
+
+            //Error checking on user inputs.
             while (gameChoice == -1 || players == -1)
             {
                 if (int.TryParse(userGame, out int result) && (result == 0))
@@ -43,6 +60,7 @@ namespace CardGamesCSharp
                     players = -1;
                 }
             }
+            //Switch statement that starts a specific game based on user choices.
             switch (gameChoice)
             {
                 case 0:
