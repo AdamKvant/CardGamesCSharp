@@ -66,7 +66,7 @@ namespace CardGamesCSharp
                 }
                 else
                 {
-                    blackjackHandValue += (short)card.getBlackjackValue();
+                    blackjackHandValue += (short) card.getBlackjackValue();
                 }
             }
 
