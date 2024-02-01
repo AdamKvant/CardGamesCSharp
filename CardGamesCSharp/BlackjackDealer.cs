@@ -28,6 +28,8 @@ namespace CardGamesCSharp
          * this.dealer is assigned to the last player in the this.players array. <br>
          * this.dealerHand is assigned to the dealer's hand of cards. <br>
          * this.reveal is set to false by default. <br>
+         * @param deck The deck used by the BlackjackDealer.
+         * @param players The array of BlackjackPlayers that contains all players in the game.
          */
         public BlackjackDealer(Deck deck, BlackjackPlayer[] players) : base(deck)
         {

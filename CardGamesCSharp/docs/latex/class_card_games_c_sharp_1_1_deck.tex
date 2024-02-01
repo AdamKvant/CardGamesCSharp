@@ -1,20 +1,26 @@
 \doxysection{Card\+Games\+CSharp.\+Deck Class Reference}
 \hypertarget{class_card_games_c_sharp_1_1_deck}{}\label{class_card_games_c_sharp_1_1_deck}\index{CardGamesCSharp.Deck@{CardGamesCSharp.Deck}}
+
+
+The Deck class makes a 52 \texorpdfstring{$\ast$}{*} n card deck out of Card objects.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_card_games_c_sharp_1_1_deck_a349b0e63e08298042db6c3726c7b799f}\label{class_card_games_c_sharp_1_1_deck_a349b0e63e08298042db6c3726c7b799f} 
-{\bfseries Deck} (int deck\+Count)
-\item 
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck_a349b0e63e08298042db6c3726c7b799f}{Deck}} (int deck\+Count)
+\begin{DoxyCompactList}\small\item\em The constructor for the Deck class initializes the following variables\+: ~\newline
+ this.\+deck\+Count is initialized to the passed in deck\+Count. ~\newline
+ this.\+size is assigned to deck\+Count \texorpdfstring{$\ast$}{*} 52. ~\newline
+ this.\+deck initializes a new Card array of size this.\+size. ~\newline
+ this.\+deck has all cards initialized inside of itself. \end{DoxyCompactList}\item 
 \Hypertarget{class_card_games_c_sharp_1_1_deck_ae3b2865d45339d9daad8506245111f19}\label{class_card_games_c_sharp_1_1_deck_ae3b2865d45339d9daad8506245111f19} 
 void {\bfseries Shuffle} ()
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_deck_af4c6752def734ae644f8b06947c9e97f}\label{class_card_games_c_sharp_1_1_deck_af4c6752def734ae644f8b06947c9e97f} 
-\mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} {\bfseries Get\+Card} (int index)
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_deck_a37511185399e4159d8f36b12406ba07e}\label{class_card_games_c_sharp_1_1_deck_a37511185399e4159d8f36b12406ba07e} 
-override string {\bfseries To\+String} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The Shuffle method uses the Fisher-\/\+Yates shuffle algorithm to shuffle this.\+deck. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} \mbox{\hyperlink{class_card_games_c_sharp_1_1_deck_af4c6752def734ae644f8b06947c9e97f}{Get\+Card}} (int index)
+\begin{DoxyCompactList}\small\item\em Get\+Card returns the Card object at a specifc index. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_card_games_c_sharp_1_1_deck_a37511185399e4159d8f36b12406ba07e}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em The To\+String for a Deck object. Each row in the string is a specific suit. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +33,65 @@ int {\bfseries deck\+Count}
 \Hypertarget{class_card_games_c_sharp_1_1_deck_a59b9a3429d4b8cec6f709cf90e68efeb}\label{class_card_games_c_sharp_1_1_deck_a59b9a3429d4b8cec6f709cf90e68efeb} 
 \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}}\mbox{[}$\,$\mbox{]} {\bfseries deck}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Deck class makes a 52 \texorpdfstring{$\ast$}{*} n card deck out of Card objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_deck_a349b0e63e08298042db6c3726c7b799f}\label{class_card_games_c_sharp_1_1_deck_a349b0e63e08298042db6c3726c7b799f} 
+\index{CardGamesCSharp.Deck@{CardGamesCSharp.Deck}!Deck@{Deck}}
+\index{Deck@{Deck}!CardGamesCSharp.Deck@{CardGamesCSharp.Deck}}
+\doxysubsubsection{\texorpdfstring{Deck()}{Deck()}}
+{\footnotesize\ttfamily Card\+Games\+CSharp.\+Deck.\+Deck (\begin{DoxyParamCaption}\item[{int}]{deck\+Count }\end{DoxyParamCaption})}
+
+
+
+The constructor for the Deck class initializes the following variables\+: ~\newline
+ this.\+deck\+Count is initialized to the passed in deck\+Count. ~\newline
+ this.\+size is assigned to deck\+Count \texorpdfstring{$\ast$}{*} 52. ~\newline
+ this.\+deck initializes a new Card array of size this.\+size. ~\newline
+ this.\+deck has all cards initialized inside of itself. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck\+Count} & The number of fifty-\/two card decks in this.\+deck. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_deck_af4c6752def734ae644f8b06947c9e97f}\label{class_card_games_c_sharp_1_1_deck_af4c6752def734ae644f8b06947c9e97f} 
+\index{CardGamesCSharp.Deck@{CardGamesCSharp.Deck}!GetCard@{GetCard}}
+\index{GetCard@{GetCard}!CardGamesCSharp.Deck@{CardGamesCSharp.Deck}}
+\doxysubsubsection{\texorpdfstring{GetCard()}{GetCard()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} Card\+Games\+CSharp.\+Deck.\+Get\+Card (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Get\+Card returns the Card object at a specifc index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & The index of the returned Card. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+this.\+deck\mbox{[}index\mbox{]} 
+\end{DoxyReturn}
+\Hypertarget{class_card_games_c_sharp_1_1_deck_a37511185399e4159d8f36b12406ba07e}\label{class_card_games_c_sharp_1_1_deck_a37511185399e4159d8f36b12406ba07e} 
+\index{CardGamesCSharp.Deck@{CardGamesCSharp.Deck}!ToString@{ToString}}
+\index{ToString@{ToString}!CardGamesCSharp.Deck@{CardGamesCSharp.Deck}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Card\+Games\+CSharp.\+Deck.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The To\+String for a Deck object. Each row in the string is a specific suit. 
+
+\begin{DoxyReturn}{Returns}
+The Deck in a string representation. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

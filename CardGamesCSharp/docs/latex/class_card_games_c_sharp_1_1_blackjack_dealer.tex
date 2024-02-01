@@ -14,8 +14,7 @@ Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+Dealer\+:\begin{figure}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c} 
-{\bfseries Blackjack\+Dealer} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}} deck, \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player}{Blackjack\+Player}}\mbox{[}$\,$\mbox{]} players)
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c}{Blackjack\+Dealer}} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}} deck, \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player}{Blackjack\+Player}}\mbox{[}$\,$\mbox{]} players)
 \begin{DoxyCompactList}\small\item\em Constructor for the Blackjack\+Dealer class, all class variables initialized\+: ~\newline
  base.\+deck is set to the deck passed in. ~\newline
  this.\+players is initialized to the Blackjack\+Players array passed in. ~\newline
@@ -39,15 +38,16 @@ override string \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_dealer_a
 \begin{DoxyCompactItemize}
 \item 
 void {\bfseries Initial\+Deal} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initial\+Deal is configured in the respective Dealer subclass to deal the starting cards to all players (and sometimes the dealer as well). \end{DoxyCompactList}\item 
 void {\bfseries add\+Card\+To\+Player} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Player}} player)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The add\+Card\+To\+Player method is configured in a Dealer subclass to give a card to the passed in player. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_dealer}{Card\+Games\+CSharp.\+Dealer}}}
 \begin{DoxyCompactItemize}
 \item 
-{\bfseries Dealer} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}} deck)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_dealer_abbe28c3dc4972c1caf1c6f08c175e9fb}{Dealer}} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}} deck)
+\begin{DoxyCompactList}\small\item\em The constructor for the Dealer class initializes the following variables\+: ~\newline
+ this.\+deck is assigned to the passed in deck. this.\+current card is initialized to the original top card, 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_dealer}{Card\+Games\+CSharp.\+Dealer}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -59,6 +59,32 @@ int {\bfseries current\+Card}
 
 \doxysubsection{Detailed Description}
 Blackjack\+Dealer is the manager class for all card transfers to players in Blackjack. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c} 
+\index{CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}!BlackjackDealer@{BlackjackDealer}}
+\index{BlackjackDealer@{BlackjackDealer}!CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}}
+\doxysubsubsection{\texorpdfstring{BlackjackDealer()}{BlackjackDealer()}}
+{\footnotesize\ttfamily Card\+Games\+CSharp.\+Blackjack\+Dealer.\+Blackjack\+Dealer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}}}]{deck,  }\item[{\mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player}{Blackjack\+Player}}\mbox{[}$\,$\mbox{]}}]{players }\end{DoxyParamCaption})}
+
+
+
+Constructor for the Blackjack\+Dealer class, all class variables initialized\+: ~\newline
+ base.\+deck is set to the deck passed in. ~\newline
+ this.\+players is initialized to the Blackjack\+Players array passed in. ~\newline
+ this.\+dealer is assigned to the last player in the this.\+players array. ~\newline
+ this.\+dealer\+Hand is assigned to the dealer\textquotesingle{}s hand of cards. ~\newline
+ this.\+reveal is set to false by default. ~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em deck} & The deck used by the Blackjack\+Dealer. \\
+\hline
+{\em players} & The array of Blackjack\+Players that contains all players in the game. \\
+\hline
+\end{DoxyParams}
+
 
 \doxysubsection{Member Function Documentation}
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db} 

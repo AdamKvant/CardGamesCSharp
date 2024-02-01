@@ -18,6 +18,7 @@ namespace CardGamesCSharp
          * @brief The BlackjackPlayer's constructor initializes the following variables: <br>
          * base.id is initialized to the integer passed in. <br>
          * this.blackjackHand is initially set to 0.
+         * @param id is set to the passed in id.
          */
         public BlackjackPlayer(int id) : base(id)
         {

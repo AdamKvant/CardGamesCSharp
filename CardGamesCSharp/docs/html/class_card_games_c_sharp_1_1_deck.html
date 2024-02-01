@@ -99,20 +99,28 @@ $(function(){initNavTree('class_card_games_c_sharp_1_1_deck.html',''); initResiz
   <div class="headertitle"><div class="title">CardGamesCSharp.Deck Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The Deck class makes a 52 * n card deck out of Card objects.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a349b0e63e08298042db6c3726c7b799f" id="r_a349b0e63e08298042db6c3726c7b799f"><td class="memItemLeft" align="right" valign="top"><a id="a349b0e63e08298042db6c3726c7b799f" name="a349b0e63e08298042db6c3726c7b799f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Deck</b> (int deckCount)</td></tr>
+<tr class="memitem:a349b0e63e08298042db6c3726c7b799f" id="r_a349b0e63e08298042db6c3726c7b799f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a349b0e63e08298042db6c3726c7b799f">Deck</a> (int deckCount)</td></tr>
+<tr class="memdesc:a349b0e63e08298042db6c3726c7b799f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the Deck class initializes the following variables: <br  />
+ this.deckCount is initialized to the passed in deckCount. <br  />
+ this.size is assigned to deckCount * 52. <br  />
+ this.deck initializes a new Card array of size this.size. <br  />
+ this.deck has all cards initialized inside of itself.  <br /></td></tr>
 <tr class="separator:a349b0e63e08298042db6c3726c7b799f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3b2865d45339d9daad8506245111f19" id="r_ae3b2865d45339d9daad8506245111f19"><td class="memItemLeft" align="right" valign="top"><a id="ae3b2865d45339d9daad8506245111f19" name="ae3b2865d45339d9daad8506245111f19"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Shuffle</b> ()</td></tr>
+<tr class="memdesc:ae3b2865d45339d9daad8506245111f19"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Shuffle method uses the Fisher-Yates shuffle algorithm to shuffle this.deck. <br /></td></tr>
 <tr class="separator:ae3b2865d45339d9daad8506245111f19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c6752def734ae644f8b06947c9e97f" id="r_af4c6752def734ae644f8b06947c9e97f"><td class="memItemLeft" align="right" valign="top"><a id="af4c6752def734ae644f8b06947c9e97f" name="af4c6752def734ae644f8b06947c9e97f"></a>
-<a class="el" href="class_card_games_c_sharp_1_1_card.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><b>GetCard</b> (int index)</td></tr>
+<tr class="memitem:af4c6752def734ae644f8b06947c9e97f" id="r_af4c6752def734ae644f8b06947c9e97f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_card_games_c_sharp_1_1_card.html">Card</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4c6752def734ae644f8b06947c9e97f">GetCard</a> (int index)</td></tr>
+<tr class="memdesc:af4c6752def734ae644f8b06947c9e97f"><td class="mdescLeft">&#160;</td><td class="mdescRight">GetCard returns the Card object at a specifc index.  <br /></td></tr>
 <tr class="separator:af4c6752def734ae644f8b06947c9e97f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37511185399e4159d8f36b12406ba07e" id="r_a37511185399e4159d8f36b12406ba07e"><td class="memItemLeft" align="right" valign="top"><a id="a37511185399e4159d8f36b12406ba07e" name="a37511185399e4159d8f36b12406ba07e"></a>
-override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> ()</td></tr>
+<tr class="memitem:a37511185399e4159d8f36b12406ba07e" id="r_a37511185399e4159d8f36b12406ba07e"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a37511185399e4159d8f36b12406ba07e">ToString</a> ()</td></tr>
+<tr class="memdesc:a37511185399e4159d8f36b12406ba07e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ToString for a Deck object. Each row in the string is a specific suit.  <br /></td></tr>
 <tr class="separator:a37511185399e4159d8f36b12406ba07e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -127,6 +135,85 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>deckCount</b></td></tr
 <a class="el" href="class_card_games_c_sharp_1_1_card.html">Card</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>deck</b></td></tr>
 <tr class="separator:a59b9a3429d4b8cec6f709cf90e68efeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The Deck class makes a 52 * n card deck out of Card objects. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a349b0e63e08298042db6c3726c7b799f" name="a349b0e63e08298042db6c3726c7b799f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349b0e63e08298042db6c3726c7b799f">&#9670;&#160;</a></span>Deck()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardGamesCSharp.Deck.Deck </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>deckCount</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The constructor for the Deck class initializes the following variables: <br  />
+ this.deckCount is initialized to the passed in deckCount. <br  />
+ this.size is assigned to deckCount * 52. <br  />
+ this.deck initializes a new Card array of size this.size. <br  />
+ this.deck has all cards initialized inside of itself. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deckCount</td><td>The number of fifty-two card decks in this.deck. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="af4c6752def734ae644f8b06947c9e97f" name="af4c6752def734ae644f8b06947c9e97f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4c6752def734ae644f8b06947c9e97f">&#9670;&#160;</a></span>GetCard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_card_games_c_sharp_1_1_card.html">Card</a> CardGamesCSharp.Deck.GetCard </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>GetCard returns the Card object at a specifc index. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>The index of the returned Card. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>this.deck[index] </dd></dl>
+
+</div>
+</div>
+<a id="a37511185399e4159d8f36b12406ba07e" name="a37511185399e4159d8f36b12406ba07e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37511185399e4159d8f36b12406ba07e">&#9670;&#160;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">override string CardGamesCSharp.Deck.ToString </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The ToString for a Deck object. Each row in the string is a specific suit. </p>
+<dl class="section return"><dt>Returns</dt><dd>The Deck in a string representation. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Deck.cs</b></li>
 </ul>

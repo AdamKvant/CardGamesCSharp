@@ -5,12 +5,26 @@ using System.Text;
 using System.Threading.Tasks;
 namespace CardGamesCSharp
 {
+    /**
+     * @brief The Deck class makes a 52 * n card deck out of Card objects.
+     */
     class Deck
     {
+        //Number of Cards in the deck.
         protected int size;
+        //The total number of fifty-two card decks in the Deck object.
         protected int deckCount;
+        // The array of Card objects that make up the Deck object.
         protected Card[] deck;
 
+        /**
+         * @brief The constructor for the Deck class initializes the following variables: <br>
+         * this.deckCount is initialized to the passed in deckCount. <br>
+         * this.size is assigned to deckCount * 52. <br>
+         * this.deck initializes a new Card array of size this.size. <br>
+         * this.deck has all cards initialized inside of itself.
+         * @param deckCount The number of fifty-two card decks in this.deck.
+         */
         public Deck(int deckCount)
         {
             this.deckCount = deckCount;
@@ -18,6 +32,8 @@ namespace CardGamesCSharp
             this.deck = new Card[this.size];
             int value;
             char suit;
+
+            //Initialize all cards inside of the deck
             for (int j = 0; j < this.size; j++)
             {
                 value = (j % 13) + 1;
@@ -38,9 +54,16 @@ namespace CardGamesCSharp
                 {
                     suit = 'D'; // Diamonds
                 }
+
+                //New Card added to this.deck.
                 this.deck[j] = new Card(suit, value);
             }
         }
+
+        /**
+         * @brief The Shuffle method uses the Fisher-Yates shuffle algorithm
+         * to shuffle this.deck.
+         */
         public void Shuffle()
         {
             //Shuffle uses Fisher-Yates Shuffle Algorithm
@@ -54,6 +77,11 @@ namespace CardGamesCSharp
             }
         }
 
+        /**
+         * @brief GetCard returns the Card object at a specifc index.
+         * @param index The index of the returned Card.
+         * @return this.deck[index]
+         */
         public Card GetCard(int index)
         {
             if (index >= 0 && index < size)
@@ -66,7 +94,11 @@ namespace CardGamesCSharp
             }
         }
 
-
+        /**
+         * @brief The ToString for a Deck object.
+         * Each row in the string is a specific suit.
+         * @return The Deck in a string representation.
+         */
         public override string ToString()
         {
             string str = "";

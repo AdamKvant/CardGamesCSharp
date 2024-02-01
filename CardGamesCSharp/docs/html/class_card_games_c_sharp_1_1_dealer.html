@@ -117,15 +117,18 @@ Inheritance diagram for CardGamesCSharp.Dealer:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ae9faae5b4180def777e8555a8847114a" id="r_ae9faae5b4180def777e8555a8847114a"><td class="memItemLeft" align="right" valign="top"><a id="ae9faae5b4180def777e8555a8847114a" name="ae9faae5b4180def777e8555a8847114a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>InitialDeal</b> ()</td></tr>
+<tr class="memdesc:ae9faae5b4180def777e8555a8847114a"><td class="mdescLeft">&#160;</td><td class="mdescRight">InitialDeal is configured in the respective Dealer subclass to deal the starting cards to all players (and sometimes the dealer as well). <br /></td></tr>
 <tr class="separator:ae9faae5b4180def777e8555a8847114a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07b4800ce0326db97e8e5ae9c2e44ce0" id="r_a07b4800ce0326db97e8e5ae9c2e44ce0"><td class="memItemLeft" align="right" valign="top"><a id="a07b4800ce0326db97e8e5ae9c2e44ce0" name="a07b4800ce0326db97e8e5ae9c2e44ce0"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>addCardToPlayer</b> (<a class="el" href="class_card_games_c_sharp_1_1_player.html">Player</a> player)</td></tr>
+<tr class="memdesc:a07b4800ce0326db97e8e5ae9c2e44ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The addCardToPlayer method is configured in a Dealer subclass to give a card to the passed in player. <br /></td></tr>
 <tr class="separator:a07b4800ce0326db97e8e5ae9c2e44ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:abbe28c3dc4972c1caf1c6f08c175e9fb" id="r_abbe28c3dc4972c1caf1c6f08c175e9fb"><td class="memItemLeft" align="right" valign="top"><a id="abbe28c3dc4972c1caf1c6f08c175e9fb" name="abbe28c3dc4972c1caf1c6f08c175e9fb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Dealer</b> (<a class="el" href="class_card_games_c_sharp_1_1_deck.html">Deck</a> deck)</td></tr>
+<tr class="memitem:abbe28c3dc4972c1caf1c6f08c175e9fb" id="r_abbe28c3dc4972c1caf1c6f08c175e9fb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abbe28c3dc4972c1caf1c6f08c175e9fb">Dealer</a> (<a class="el" href="class_card_games_c_sharp_1_1_deck.html">Deck</a> deck)</td></tr>
+<tr class="memdesc:abbe28c3dc4972c1caf1c6f08c175e9fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The constructor for the Dealer class initializes the following variables: <br  />
+ this.deck is assigned to the passed in deck. this.current card is initialized to the original top card, 0.  <br /></td></tr>
 <tr class="separator:abbe28c3dc4972c1caf1c6f08c175e9fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
@@ -139,7 +142,42 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>currentCard</b></td></
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The abstract Dealer class stores the deck for the game, and current card. Function stubs are useful in every card game for distributing cards to players. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="abbe28c3dc4972c1caf1c6f08c175e9fb" name="abbe28c3dc4972c1caf1c6f08c175e9fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbe28c3dc4972c1caf1c6f08c175e9fb">&#9670;&#160;</a></span>Dealer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardGamesCSharp.Dealer.Dealer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_card_games_c_sharp_1_1_deck.html">Deck</a></td>          <td class="paramname"><span class="paramname"><em>deck</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The constructor for the Dealer class initializes the following variables: <br  />
+ this.deck is assigned to the passed in deck. this.current card is initialized to the original top card, 0. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deck</td><td>The deck used by the Dealer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Dealer.cs</b></li>
 </ul>
 </div><!-- contents -->
