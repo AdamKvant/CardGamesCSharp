@@ -30,7 +30,7 @@ namespace CardGamesCSharp
         }
 
         /**
-         * @brief The function dispBuffer writes 3 newlines on the screen which allows text in the terminal to be sent off the visible screen.
+         * @brief The function dispBuffer writes i newlines on the screen which allows text in the terminal to be sent off the visible screen.
          */
         public static void dispBuffer(int i)
         {
