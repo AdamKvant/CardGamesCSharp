@@ -1,7 +1,7 @@
 var annotated_dup =
 [
     [ "CardGamesCSharp", "namespace_card_games_c_sharp.html", [
-      [ "Blackjack", "class_card_games_c_sharp_1_1_blackjack.html", null ],
+      [ "Blackjack", "class_card_games_c_sharp_1_1_blackjack.html", "class_card_games_c_sharp_1_1_blackjack" ],
       [ "BlackjackDealer", "class_card_games_c_sharp_1_1_blackjack_dealer.html", null ],
       [ "BlackjackPlayer", "class_card_games_c_sharp_1_1_blackjack_player.html", null ],
       [ "Card", "class_card_games_c_sharp_1_1_card.html", null ],

@@ -6,18 +6,34 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
+    /**
+     * @brief The Blackjack class inherits from the CardGame class, and it contains the core gameplay implementation for Blackjack.
+     */
     class Blackjack : CardGame
     {
-        private bool allPlayersOut;
+        // players contains all of the BlackjackPlayers in the current game.
         protected BlackjackPlayer[] players;
+        // dealer contains the BlackjackDealer, which manages all card distribution to all players.
         protected BlackjackDealer dealer;
+        // dealerIndex is the last index in the array of players, as this is where the dealer is stored.
         protected int dealerIndex;
+        // dealerPlayer is a reference to the dealer's BlackjackPlayer object in the the players array.
         protected BlackjackPlayer dealerPlayer;
 
+        /**
+         * @brief The Blackjack constructor initializes all class variables:<br>
+         * base.deck is set to a deck of four, standard fifty-two card decks (shuffled at the start of run).<br>
+         * base.turn is initialized to 0 (not used in Blackjack).<br>
+         * base.playerCount is set to the number of players passed in.<br>
+         * this.players is set to the number of players+1 to account for the dealer (done in Main).<br>
+         * this.players is also filled with new BlackjackPlayer objects.<br>
+         * this.dealer is assigned a new BlackjackDealer which is assigned this.deck, and this.players.<br>
+         * this.dealerIndex is assigned to the last index in this.players.<br>
+         * this.dealerPlayer is assigned to the BlackjackPlayer object in the this.dealer index in this.players.<br>
+         */
         public Blackjack(int players) : base(players)
         {
             base.deck = new Deck(4);
-            allPlayersOut = false;
             this.players = new BlackjackPlayer[players];
             for (int i = 0; i < this.players.Length; i++)
             {
@@ -28,46 +44,73 @@ namespace CardGamesCSharp
             this.dealerPlayer = this.players[dealerIndex];
         }
 
-        public bool isGameOver()
-        {
-            throw new NotImplementedException();
-        }
-
+        /**
+         * @brief The run method runs the Blackjack game. 
+         */
         public override void run()
         {
+            //Every player can continue to hit on their turn by default.
             bool continueHit = true;
+
+            // Used to parse user input for "hit" or "stay".
             int result = -1;
+
+            // this.deck is shuffled.
             deck.Shuffle();
+
+            // InitialDeal is used to deal starting hands to all players and the dealer.
             Console.WriteLine("Dealing cards to players");
             this.dealer.InitialDeal();
+
+            //Print out dealer's hand.
             Console.WriteLine(dealer.ToString());
+
+            //Print out all players' hands.
             foreach (Player player in players)
             {
                 Console.WriteLine(player.ToString());
             }
+
+            //Clear the terminal to prepare for the first player's turn.
             dispBuffer(8);
+
+            //Loop containing all logic for "hit" or "stay" for each player besides the dealer
             for (int i = 0; i < this.players.Length - 1; i++)
             {
+                //continueHit always set to true for each player before their turn.
                 continueHit = true;
+
+                //Blackjack value calculated for current player.
                 players[i].calculateBjHandValue();
+
+                // While loop that runs while a player wants to continue adding to their hand,
+                // and has a hand value at or below 21.
                 while (continueHit && players[i].getBlackjackHandValue() <= 21)
                 {
+                    //Dealer and current player's hands are displayed
                     Console.WriteLine(dealer.ToString());
                     Console.WriteLine(this.players[i].ToString());
                     Console.WriteLine("Do you want to hit(0) or stay(1)?");
+
+                    //Player's choice recorded.
                     string choice = Console.ReadLine();
 
+                    //If 0 entered, add a card to the player's hand, print their hand, and calculate their hand value.
                     if (int.TryParse(choice, out result) && result == 0)
                     {
                         dealer.addCardToPlayer(this.players[i]);
                         Console.WriteLine(this.players[i].ToString());
                         players[i].calculateBjHandValue();
                     }
+
+                    //If 1 entered, print out player's hand and set continueHit to false to end the player's turn.
                     else if (int.TryParse(choice, out result) && result == 1)
                     {
                         Console.WriteLine(this.players[i].ToString());
                         continueHit = false;
                     }
+
+                    //Same as above, this is error handling for the user inputs above.
                     else
                     {
                         while (result > 1 && result < 0)
@@ -88,22 +131,30 @@ namespace CardGamesCSharp
                         }
                     }
                 }
+
+                //If a player's hand value is greater than 21, the player busts and they are out of the game.
                 if (players[i].getBlackjackHandValue() > 21)
                 {
                     Console.WriteLine($"Player {i + 1} busts");
                     players[i].setIsOut();
                     dispBuffer(3);
                 }
+
+                //Otherwise, the player is notified that they are still in.
                 else
                 {
                     Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
                     dispBuffer(3);
                 }
             }
+
+            //Update the revealed status for the dealer to be able to see their full hand.
             dealer.updateReveal();
             Console.WriteLine("Dealer revealing cards:");
             Console.WriteLine(dealer);
             dealerPlayer.calculateBjHandValue();
+
+            //Adds cards to the dealer's hand until they have a hand value of at least 17.
             while (dealerPlayer.getBlackjackHandValue() < 17)
             {
                 Console.WriteLine("Dealer is under 17, drawing another card");
@@ -111,7 +162,10 @@ namespace CardGamesCSharp
                 Console.WriteLine(dealer);
                 dealerPlayer.calculateBjHandValue();
             }
+
             short dealerHandVal = dealerPlayer.getBlackjackHandValue();
+
+            //If the dealer busts, notify all players of their end-of-game status.
             if (dealerHandVal > 21)
             {
                 Console.WriteLine("Dealer busts!");
@@ -127,6 +181,8 @@ namespace CardGamesCSharp
                     }
                 }
             }
+
+            //Otherwise, the dealer is still in, notify all players of their end-of-game status.
             else
             {
                 foreach (BlackjackPlayer player in this.players)
@@ -150,12 +206,6 @@ namespace CardGamesCSharp
 
                 }
             }
-
-
-
-
-
-
         }
     }
 }

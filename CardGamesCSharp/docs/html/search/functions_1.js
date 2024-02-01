@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dispbuffer_0',['dispBuffer',['../class_card_games_c_sharp_1_1_card_game.html#aa9b570e47de436d5d3bfeaa2e5ec8126',1,'CardGamesCSharp::CardGame']]]
+  ['cardgame_0',['CardGame',['../class_card_games_c_sharp_1_1_card_game.html#a4dfec62f6e1f6ef98802b26f41dd3c28',1,'CardGamesCSharp::CardGame']]]
 ];

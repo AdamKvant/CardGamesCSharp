@@ -1,5 +1,10 @@
 \doxysection{Card\+Games\+CSharp.\+Blackjack Class Reference}
 \hypertarget{class_card_games_c_sharp_1_1_blackjack}{}\label{class_card_games_c_sharp_1_1_blackjack}\index{CardGamesCSharp.Blackjack@{CardGamesCSharp.Blackjack}}
+
+
+The Blackjack class inherits from the Card\+Game class, and it contains the core gameplay implementation for Blackjack.  
+
+
 Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,13 +16,19 @@ Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+:\begin{figure}[H]
 \item 
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d}\label{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d} 
 {\bfseries Blackjack} (int players)
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_a89aaf64adb35b82fc216a0e3bf792f97}\label{class_card_games_c_sharp_1_1_blackjack_a89aaf64adb35b82fc216a0e3bf792f97} 
-bool {\bfseries is\+Game\+Over} ()
-\item 
+\begin{DoxyCompactList}\small\item\em The Blackjack constructor initializes all class variables\+:~\newline
+ base.\+deck is set to a deck of four, standard fifty-\/two card decks (shuffled at the start of run).~\newline
+ base.\+turn is initialized to 0 (not used in Blackjack).~\newline
+ base.\+player\+Count is set to the number of players passed in.~\newline
+ this.\+players is set to the number of players+1 to account for the dealer (done in Main).~\newline
+ this.\+players is also filled with new Blackjack\+Player objects.~\newline
+ this.\+dealer is assigned a new Blackjack\+Dealer which is assigned this.\+deck, and this.\+players.~\newline
+ this.\+dealer\+Index is assigned to the last index in this.\+players.~\newline
+ this.\+dealer\+Player is assigned to the Blackjack\+Player object in the this.\+dealer index in this.\+players.~\newline
+ \end{DoxyCompactList}\item 
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_a56cb0a798ffb50e1dc19d5558bd27f26}\label{class_card_games_c_sharp_1_1_blackjack_a56cb0a798ffb50e1dc19d5558bd27f26} 
 override void {\bfseries run} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The run method runs the Blackjack game. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_card_game}{Card\+Games\+CSharp.\+Card\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -51,14 +62,17 @@ int {\bfseries turn}
 \doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_card_game}{Card\+Games\+CSharp.\+Card\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
-static void {\bfseries disp\+Buffer} ()
-\begin{DoxyCompactList}\small\item\em The function disp\+Buffer writes 3 newlines on the screen which allows text in the terminal to be sent off the visible screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static void {\bfseries disp\+Buffer} (int i)
+\begin{DoxyCompactList}\small\item\em The function disp\+Buffer writes i newlines on the screen which allows text in the terminal to be sent off the visible screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_card_game}{Card\+Games\+CSharp.\+Card\+Game}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_card_games_c_sharp_1_1_card_game_a4dfec62f6e1f6ef98802b26f41dd3c28}{Card\+Game}} (int players)
 \begin{DoxyCompactList}\small\item\em Constructor for Cardgame class, this.\+player\+Count is set to the parameter players. The class variable this.\+turn is assigned 0. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The Blackjack class inherits from the Card\+Game class, and it contains the core gameplay implementation for Blackjack. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

@@ -3,7 +3,7 @@ var indexSectionsWithContent =
   0: "bcdpr",
   1: "bcdp",
   2: "c",
-  3: "cdr"
+  3: "bcdr"
 };
 
 var indexSectionNames =
