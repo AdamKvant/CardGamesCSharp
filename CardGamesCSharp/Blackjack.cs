@@ -30,6 +30,7 @@ namespace CardGamesCSharp
          * this.dealer is assigned a new BlackjackDealer which is assigned this.deck, and this.players.<br>
          * this.dealerIndex is assigned to the last index in this.players.<br>
          * this.dealerPlayer is assigned to the BlackjackPlayer object in the this.dealer index in this.players.<br>
+         * @param players this.players is an int that represents the total number of players, including the dealer.
          */
         public Blackjack(int players) : base(players)
         {

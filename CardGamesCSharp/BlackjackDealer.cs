@@ -6,14 +6,24 @@ using System.Threading.Tasks;
 
 namespace CardGamesCSharp
 {
+    /**
+     * @brief BlackjackDealer is the manager class for all card transfers to players in Blackjack.
+     */
     class BlackjackDealer : Dealer
 
     {
+        //The BlackjackPlayer that is the dealer in the game of Blackjack.
         private BlackjackPlayer dealer;
+        //The hand tied to the dealer.
         private List<Card> dealerHand;
+        //Boolean which determines how many cards are revealed in dealer ToString.
         private bool reveal;
+        //All players in the Blackjack game.
         private BlackjackPlayer[] players;
 
+        /**
+         * @brief Constructor for the BlackjackDealer class, all class variables initialized: <br>
+         */
         public BlackjackDealer(Deck deck, BlackjackPlayer[] players) : base(deck)
         {
             this.players = players;

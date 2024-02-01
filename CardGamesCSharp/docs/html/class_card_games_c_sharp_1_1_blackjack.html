@@ -114,8 +114,7 @@ Inheritance diagram for CardGamesCSharp.Blackjack:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adc39a101ec126f380f4084ec7007940d" id="r_adc39a101ec126f380f4084ec7007940d"><td class="memItemLeft" align="right" valign="top"><a id="adc39a101ec126f380f4084ec7007940d" name="adc39a101ec126f380f4084ec7007940d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Blackjack</b> (int players)</td></tr>
+<tr class="memitem:adc39a101ec126f380f4084ec7007940d" id="r_adc39a101ec126f380f4084ec7007940d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc39a101ec126f380f4084ec7007940d">Blackjack</a> (int players)</td></tr>
 <tr class="memdesc:adc39a101ec126f380f4084ec7007940d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Blackjack constructor initializes all class variables:<br  />
  base.deck is set to a deck of four, standard fifty-two card decks (shuffled at the start of run).<br  />
  base.turn is initialized to 0 (not used in Blackjack).<br  />
@@ -125,7 +124,7 @@ Public Member Functions</h2></td></tr>
  this.dealer is assigned a new BlackjackDealer which is assigned this.deck, and this.players.<br  />
  this.dealerIndex is assigned to the last index in this.players.<br  />
  this.dealerPlayer is assigned to the BlackjackPlayer object in the this.dealer index in this.players.<br  />
- <br /></td></tr>
+  <br /></td></tr>
 <tr class="separator:adc39a101ec126f380f4084ec7007940d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56cb0a798ffb50e1dc19d5558bd27f26" id="r_a56cb0a798ffb50e1dc19d5558bd27f26"><td class="memItemLeft" align="right" valign="top"><a id="a56cb0a798ffb50e1dc19d5558bd27f26" name="a56cb0a798ffb50e1dc19d5558bd27f26"></a>
 override void&#160;</td><td class="memItemRight" valign="bottom"><b>run</b> ()</td></tr>
@@ -176,7 +175,42 @@ static void&#160;</td><td class="memItemRight" valign="bottom"><b>dispBuffer</b>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The Blackjack class inherits from the CardGame class, and it contains the core gameplay implementation for Blackjack. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="adc39a101ec126f380f4084ec7007940d" name="adc39a101ec126f380f4084ec7007940d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc39a101ec126f380f4084ec7007940d">&#9670;&#160;</a></span>Blackjack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CardGamesCSharp.Blackjack.Blackjack </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>players</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Blackjack constructor initializes all class variables:<br  />
+ base.deck is set to a deck of four, standard fifty-two card decks (shuffled at the start of run).<br  />
+ base.turn is initialized to 0 (not used in Blackjack).<br  />
+ base.playerCount is set to the number of players passed in.<br  />
+ this.players is set to the number of players+1 to account for the dealer (done in Main).<br  />
+ this.players is also filled with new BlackjackPlayer objects.<br  />
+ this.dealer is assigned a new BlackjackDealer which is assigned this.deck, and this.players.<br  />
+ this.dealerIndex is assigned to the last index in this.players.<br  />
+ this.dealerPlayer is assigned to the BlackjackPlayer object in the this.dealer index in this.players.<br  />
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">players</td><td>this.players is an int that represents the total number of players, including the dealer. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Blackjack.cs</b></li>
 </ul>
 </div><!-- contents -->

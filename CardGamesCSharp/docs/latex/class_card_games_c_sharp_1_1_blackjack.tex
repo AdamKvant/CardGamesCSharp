@@ -14,8 +14,7 @@ Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+:\begin{figure}[H]
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d}\label{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d} 
-{\bfseries Blackjack} (int players)
+\mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d}{Blackjack}} (int players)
 \begin{DoxyCompactList}\small\item\em The Blackjack constructor initializes all class variables\+:~\newline
  base.\+deck is set to a deck of four, standard fifty-\/two card decks (shuffled at the start of run).~\newline
  base.\+turn is initialized to 0 (not used in Blackjack).~\newline
@@ -73,6 +72,33 @@ static void {\bfseries disp\+Buffer} (int i)
 
 \doxysubsection{Detailed Description}
 The Blackjack class inherits from the Card\+Game class, and it contains the core gameplay implementation for Blackjack. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d}\label{class_card_games_c_sharp_1_1_blackjack_adc39a101ec126f380f4084ec7007940d} 
+\index{CardGamesCSharp.Blackjack@{CardGamesCSharp.Blackjack}!Blackjack@{Blackjack}}
+\index{Blackjack@{Blackjack}!CardGamesCSharp.Blackjack@{CardGamesCSharp.Blackjack}}
+\doxysubsubsection{\texorpdfstring{Blackjack()}{Blackjack()}}
+{\footnotesize\ttfamily Card\+Games\+CSharp.\+Blackjack.\+Blackjack (\begin{DoxyParamCaption}\item[{int}]{players }\end{DoxyParamCaption})}
+
+
+
+The Blackjack constructor initializes all class variables\+:~\newline
+ base.\+deck is set to a deck of four, standard fifty-\/two card decks (shuffled at the start of run).~\newline
+ base.\+turn is initialized to 0 (not used in Blackjack).~\newline
+ base.\+player\+Count is set to the number of players passed in.~\newline
+ this.\+players is set to the number of players+1 to account for the dealer (done in Main).~\newline
+ this.\+players is also filled with new Blackjack\+Player objects.~\newline
+ this.\+dealer is assigned a new Blackjack\+Dealer which is assigned this.\+deck, and this.\+players.~\newline
+ this.\+dealer\+Index is assigned to the last index in this.\+players.~\newline
+ this.\+dealer\+Player is assigned to the Blackjack\+Player object in the this.\+dealer index in this.\+players.~\newline
+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em players} & this.\+players is an int that represents the total number of players, including the dealer. \\
+\hline
+\end{DoxyParams}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

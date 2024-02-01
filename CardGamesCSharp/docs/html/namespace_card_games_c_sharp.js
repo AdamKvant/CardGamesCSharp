@@ -1,7 +1,7 @@
 var namespace_card_games_c_sharp =
 [
     [ "Blackjack", "class_card_games_c_sharp_1_1_blackjack.html", "class_card_games_c_sharp_1_1_blackjack" ],
-    [ "BlackjackDealer", "class_card_games_c_sharp_1_1_blackjack_dealer.html", null ],
+    [ "BlackjackDealer", "class_card_games_c_sharp_1_1_blackjack_dealer.html", "class_card_games_c_sharp_1_1_blackjack_dealer" ],
     [ "BlackjackPlayer", "class_card_games_c_sharp_1_1_blackjack_player.html", null ],
     [ "Card", "class_card_games_c_sharp_1_1_card.html", null ],
     [ "CardGame", "class_card_games_c_sharp_1_1_card_game.html", "class_card_games_c_sharp_1_1_card_game" ],
