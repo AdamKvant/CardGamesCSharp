@@ -172,6 +172,7 @@ namespace CardGamesCSharp
                 Console.WriteLine("Dealer busts!");
                 foreach (BlackjackPlayer player in players)
                 {
+                    player.calculateBjHandValue();
                     if (player.getIsOut())
                     {
                         Console.WriteLine($"Player {player.getId()} is still out :(");
@@ -188,6 +189,7 @@ namespace CardGamesCSharp
             {
                 foreach (BlackjackPlayer player in this.players)
                 {
+                    player.calculateBjHandValue();
                     if (!player.getIsOut() && player.getBlackjackHandValue() > dealerHandVal)
                     {
                         Console.WriteLine($"Player {player.getId()} wins!");

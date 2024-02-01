@@ -23,6 +23,11 @@ namespace CardGamesCSharp
 
         /**
          * @brief Constructor for the BlackjackDealer class, all class variables initialized: <br>
+         * base.deck is set to the deck passed in. <br>
+         * this.players is initialized to the BlackjackPlayers array passed in. <br>
+         * this.dealer is assigned to the last player in the this.players array. <br>
+         * this.dealerHand is assigned to the dealer's hand of cards. <br>
+         * this.reveal is set to false by default. <br>
          */
         public BlackjackDealer(Deck deck, BlackjackPlayer[] players) : base(deck)
         {
@@ -32,12 +37,19 @@ namespace CardGamesCSharp
             reveal = false;
         }
 
+        /**
+         * @brief The top card on the deck is added to the player passed in.
+         * @param player The BlackjackPlayer is having a card added to their hand.
+         */
         public override void addCardToPlayer(Player player)
         {
             player.addCard(deck.GetCard(currentCard));
             currentCard++;
         }
 
+        /**
+         * @brief Deal two cards to all players in the game (including the dealer).
+         */
         public override void InitialDeal()
         {
             foreach (Player player in players)
@@ -51,19 +63,27 @@ namespace CardGamesCSharp
                 currentCard++;
             }
         }
+
+        /**
+         * @brief Returns the dealer's hand.
+         * @return A List<Card> containing the BlackjackDealer's hand.
+         */
         public List<Card> getHand() { return dealerHand; }
+
+        /**
+         * @brief Updates the reveal boolean to true
+         */
         public void updateReveal()
         {
             reveal = true;
         }
 
-        /*public bool dealerBust() {
-            short total = 0;
-            foreach (Card card in dealerHand) {
-                
-            }
-        }*/
-
+        /**
+         * @brief Returns the BlackjackDealer's hand in a string format.
+         * If this.reveal is true then show all cards in the dealer's hand.
+         * Otherwise, only show one card in the returned string.
+         * @return The BlackjackDealer object in string form.
+         */
         public override string ToString()
         {
             string str = "Dealer's Hand: ";

@@ -98,28 +98,139 @@ $(function(){initNavTree('class_card_games_c_sharp_1_1_card.html',''); initResiz
   <div class="headertitle"><div class="title">CardGamesCSharp.Card Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>The Card class is used to represent individual cards. This is currently configured to only use the standard fifty-two card deck.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a08c87bccf36185b273b176ddff53301c" id="r_a08c87bccf36185b273b176ddff53301c"><td class="memItemLeft" align="right" valign="top"><a id="a08c87bccf36185b273b176ddff53301c" name="a08c87bccf36185b273b176ddff53301c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Card</b> (char suit, int value)</td></tr>
+<tr class="memdesc:a08c87bccf36185b273b176ddff53301c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Card class constructor initializes the following variables: <br  />
+ this.suit is assigned the passed in suit. <br  />
+ this.value is assigned the passed in value. <br  />
+ this.dispValue and this.blackjackValue are assigned based on this.value. <br  />
+ this.representation is assigned this.dispValue + this.suit. <br /></td></tr>
 <tr class="separator:a08c87bccf36185b273b176ddff53301c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99508fb68a6036cb8e2b92465253fe0d" id="r_a99508fb68a6036cb8e2b92465253fe0d"><td class="memItemLeft" align="right" valign="top"><a id="a99508fb68a6036cb8e2b92465253fe0d" name="a99508fb68a6036cb8e2b92465253fe0d"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getSuit</b> ()</td></tr>
+<tr class="memitem:a99508fb68a6036cb8e2b92465253fe0d" id="r_a99508fb68a6036cb8e2b92465253fe0d"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a99508fb68a6036cb8e2b92465253fe0d">getSuit</a> ()</td></tr>
+<tr class="memdesc:a99508fb68a6036cb8e2b92465253fe0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns this.suit as a string.  <br /></td></tr>
 <tr class="separator:a99508fb68a6036cb8e2b92465253fe0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a086ef9212012eb7b5cd38c31e27414d6" id="r_a086ef9212012eb7b5cd38c31e27414d6"><td class="memItemLeft" align="right" valign="top"><a id="a086ef9212012eb7b5cd38c31e27414d6" name="a086ef9212012eb7b5cd38c31e27414d6"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getValue</b> ()</td></tr>
+<tr class="memitem:a086ef9212012eb7b5cd38c31e27414d6" id="r_a086ef9212012eb7b5cd38c31e27414d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a086ef9212012eb7b5cd38c31e27414d6">getValue</a> ()</td></tr>
+<tr class="memdesc:a086ef9212012eb7b5cd38c31e27414d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this.value as an int.  <br /></td></tr>
 <tr class="separator:a086ef9212012eb7b5cd38c31e27414d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6c11cb14dc881b9cb8b46f9904762a8" id="r_ac6c11cb14dc881b9cb8b46f9904762a8"><td class="memItemLeft" align="right" valign="top"><a id="ac6c11cb14dc881b9cb8b46f9904762a8" name="ac6c11cb14dc881b9cb8b46f9904762a8"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getDispValue</b> ()</td></tr>
+<tr class="memitem:ac6c11cb14dc881b9cb8b46f9904762a8" id="r_ac6c11cb14dc881b9cb8b46f9904762a8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6c11cb14dc881b9cb8b46f9904762a8">getDispValue</a> ()</td></tr>
+<tr class="memdesc:ac6c11cb14dc881b9cb8b46f9904762a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the dispValue as a string.  <br /></td></tr>
 <tr class="separator:ac6c11cb14dc881b9cb8b46f9904762a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae2b20a7de0655e86b59da66a6af53ed4" id="r_ae2b20a7de0655e86b59da66a6af53ed4"><td class="memItemLeft" align="right" valign="top"><a id="ae2b20a7de0655e86b59da66a6af53ed4" name="ae2b20a7de0655e86b59da66a6af53ed4"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>getRepresentation</b> ()</td></tr>
+<tr class="memitem:ae2b20a7de0655e86b59da66a6af53ed4" id="r_ae2b20a7de0655e86b59da66a6af53ed4"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2b20a7de0655e86b59da66a6af53ed4">getRepresentation</a> ()</td></tr>
+<tr class="memdesc:ae2b20a7de0655e86b59da66a6af53ed4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this.representation.  <br /></td></tr>
 <tr class="separator:ae2b20a7de0655e86b59da66a6af53ed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5f722fe2950d5d61d20716e0be9bbcaf" id="r_a5f722fe2950d5d61d20716e0be9bbcaf"><td class="memItemLeft" align="right" valign="top"><a id="a5f722fe2950d5d61d20716e0be9bbcaf" name="a5f722fe2950d5d61d20716e0be9bbcaf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getBlackjackValue</b> ()</td></tr>
+<tr class="memitem:a5f722fe2950d5d61d20716e0be9bbcaf" id="r_a5f722fe2950d5d61d20716e0be9bbcaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f722fe2950d5d61d20716e0be9bbcaf">getBlackjackValue</a> ()</td></tr>
+<tr class="memdesc:a5f722fe2950d5d61d20716e0be9bbcaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns this.blackjackValue as an int.  <br /></td></tr>
 <tr class="separator:a5f722fe2950d5d61d20716e0be9bbcaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The Card class is used to represent individual cards. This is currently configured to only use the standard fifty-two card deck. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5f722fe2950d5d61d20716e0be9bbcaf" name="a5f722fe2950d5d61d20716e0be9bbcaf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f722fe2950d5d61d20716e0be9bbcaf">&#9670;&#160;</a></span>getBlackjackValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CardGamesCSharp.Card.getBlackjackValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this.blackjackValue as an int. </p>
+<dl class="section return"><dt>Returns</dt><dd>this.blackjackValue </dd></dl>
+
+</div>
+</div>
+<a id="ac6c11cb14dc881b9cb8b46f9904762a8" name="ac6c11cb14dc881b9cb8b46f9904762a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6c11cb14dc881b9cb8b46f9904762a8">&#9670;&#160;</a></span>getDispValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CardGamesCSharp.Card.getDispValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the dispValue as a string. </p>
+<dl class="section return"><dt>Returns</dt><dd>this.dispValue </dd></dl>
+
+</div>
+</div>
+<a id="ae2b20a7de0655e86b59da66a6af53ed4" name="ae2b20a7de0655e86b59da66a6af53ed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2b20a7de0655e86b59da66a6af53ed4">&#9670;&#160;</a></span>getRepresentation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CardGamesCSharp.Card.getRepresentation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this.representation. </p>
+<dl class="section return"><dt>Returns</dt><dd>this.representation </dd></dl>
+
+</div>
+</div>
+<a id="a99508fb68a6036cb8e2b92465253fe0d" name="a99508fb68a6036cb8e2b92465253fe0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99508fb68a6036cb8e2b92465253fe0d">&#9670;&#160;</a></span>getSuit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CardGamesCSharp.Card.getSuit </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns this.suit as a string. </p>
+<dl class="section return"><dt>Returns</dt><dd>this.suit as a string. </dd></dl>
+
+</div>
+</div>
+<a id="a086ef9212012eb7b5cd38c31e27414d6" name="a086ef9212012eb7b5cd38c31e27414d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a086ef9212012eb7b5cd38c31e27414d6">&#9670;&#160;</a></span>getValue()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int CardGamesCSharp.Card.getValue </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns this.value as an int. </p>
+<dl class="section return"><dt>Returns</dt><dd>this.value </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><b>Card.cs</b></li>
 </ul>

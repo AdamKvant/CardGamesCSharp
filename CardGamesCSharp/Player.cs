@@ -32,17 +32,7 @@ namespace CardGamesCSharp
 
         public void setIsOut() { isOut = true; }
 
-        public override string ToString()
-        {
-            string str = $"Player {id}\n";
-            str += "Hand: ";
-            for (int i = 0; i < this.hand.Count; i++)
-            {
-                str += this.hand[i].getRepresentation() + " ";
-            }
-            str += "\n";
-            return str;
-        }
+        public abstract string ToString();
 
     }
 }

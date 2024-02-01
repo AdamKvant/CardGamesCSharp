@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['card_0',['Card',['../class_card_games_c_sharp_1_1_card.html',1,'CardGamesCSharp']]],
-  ['cardgame_1',['CardGame',['../class_card_games_c_sharp_1_1_card_game.html',1,'CardGamesCSharp.CardGame'],['../class_card_games_c_sharp_1_1_card_game.html#a4dfec62f6e1f6ef98802b26f41dd3c28',1,'CardGamesCSharp.CardGame.CardGame()']]],
-  ['cardgamescsharp_2',['CardGamesCSharp',['../namespace_card_games_c_sharp.html',1,'']]]
+  ['blackjack_0',['Blackjack',['../class_card_games_c_sharp_1_1_blackjack.html',1,'CardGamesCSharp.Blackjack'],['../class_card_games_c_sharp_1_1_blackjack.html#adc39a101ec126f380f4084ec7007940d',1,'CardGamesCSharp.Blackjack.Blackjack()']]],
+  ['blackjackdealer_1',['BlackjackDealer',['../class_card_games_c_sharp_1_1_blackjack_dealer.html',1,'CardGamesCSharp.BlackjackDealer'],['../class_card_games_c_sharp_1_1_blackjack_dealer.html#a2098b8ebdefcb03620615022529ac75c',1,'CardGamesCSharp.BlackjackDealer.BlackjackDealer()']]],
+  ['blackjackplayer_2',['BlackjackPlayer',['../class_card_games_c_sharp_1_1_blackjack_player.html',1,'CardGamesCSharp.BlackjackPlayer'],['../class_card_games_c_sharp_1_1_blackjack_player.html#a6177cdbf2d15f57eeeef2fe97289f420',1,'CardGamesCSharp.BlackjackPlayer.BlackjackPlayer()']]]
 ];

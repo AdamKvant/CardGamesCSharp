@@ -17,22 +17,24 @@ Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+Dealer\+:\begin{figure}
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a2098b8ebdefcb03620615022529ac75c} 
 {\bfseries Blackjack\+Dealer} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_deck}{Deck}} deck, \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player}{Blackjack\+Player}}\mbox{[}$\,$\mbox{]} players)
 \begin{DoxyCompactList}\small\item\em Constructor for the Blackjack\+Dealer class, all class variables initialized\+: ~\newline
+ base.\+deck is set to the deck passed in. ~\newline
+ this.\+players is initialized to the Blackjack\+Players array passed in. ~\newline
+ this.\+dealer is assigned to the last player in the this.\+players array. ~\newline
+ this.\+dealer\+Hand is assigned to the dealer\textquotesingle{}s hand of cards. ~\newline
+ this.\+reveal is set to false by default. ~\newline
  \end{DoxyCompactList}\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db} 
-override void {\bfseries add\+Card\+To\+Player} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Player}} player)
-\item 
+override void \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db}{add\+Card\+To\+Player}} (\mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Player}} player)
+\begin{DoxyCompactList}\small\item\em The top card on the deck is added to the player passed in. \end{DoxyCompactList}\item 
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a5a47db13afe2e658d21fddedade8b65f}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a5a47db13afe2e658d21fddedade8b65f} 
 override void {\bfseries Initial\+Deal} ()
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a81e6ee64a1f7677e65056b8834485555}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a81e6ee64a1f7677e65056b8834485555} 
-List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ {\bfseries get\+Hand} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Deal two cards to all players in the game (including the dealer). \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_dealer_a81e6ee64a1f7677e65056b8834485555}{get\+Hand}} ()
+\begin{DoxyCompactList}\small\item\em Returns the dealer\textquotesingle{}s hand. \end{DoxyCompactList}\item 
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_aa2cea2a01ebf4a850b343b6c17eccd48}\label{class_card_games_c_sharp_1_1_blackjack_dealer_aa2cea2a01ebf4a850b343b6c17eccd48} 
 void {\bfseries update\+Reveal} ()
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a4465d5c929aa8c7dc002c16a3bd1ea84}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a4465d5c929aa8c7dc002c16a3bd1ea84} 
-override string {\bfseries To\+String} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Updates the reveal boolean to true. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_dealer_a4465d5c929aa8c7dc002c16a3bd1ea84}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em Returns the Blackjack\+Dealer\textquotesingle{}s hand in a string format. If this.\+reveal is true then show all cards in the dealer\textquotesingle{}s hand. Otherwise, only show one card in the returned string. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_dealer}{Card\+Games\+CSharp.\+Dealer}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -57,6 +59,50 @@ int {\bfseries current\+Card}
 
 \doxysubsection{Detailed Description}
 Blackjack\+Dealer is the manager class for all card transfers to players in Blackjack. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a1c14fecf154e5df7b4041a45b03232db} 
+\index{CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}!addCardToPlayer@{addCardToPlayer}}
+\index{addCardToPlayer@{addCardToPlayer}!CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}}
+\doxysubsubsection{\texorpdfstring{addCardToPlayer()}{addCardToPlayer()}}
+{\footnotesize\ttfamily override void Card\+Games\+CSharp.\+Blackjack\+Dealer.\+add\+Card\+To\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Player}}}]{player }\end{DoxyParamCaption})}
+
+
+
+The top card on the deck is added to the player passed in. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & The Blackjack\+Player is having a card added to their hand. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a81e6ee64a1f7677e65056b8834485555}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a81e6ee64a1f7677e65056b8834485555} 
+\index{CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}!getHand@{getHand}}
+\index{getHand@{getHand}!CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}}
+\doxysubsubsection{\texorpdfstring{getHand()}{getHand()}}
+{\footnotesize\ttfamily List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ Card\+Games\+CSharp.\+Blackjack\+Dealer.\+get\+Hand (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the dealer\textquotesingle{}s hand. 
+
+\begin{DoxyReturn}{Returns}
+A List$<$\+Card$>$ containing the Blackjack\+Dealer\textquotesingle{}s hand. 
+\end{DoxyReturn}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_dealer_a4465d5c929aa8c7dc002c16a3bd1ea84}\label{class_card_games_c_sharp_1_1_blackjack_dealer_a4465d5c929aa8c7dc002c16a3bd1ea84} 
+\index{CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}!ToString@{ToString}}
+\index{ToString@{ToString}!CardGamesCSharp.BlackjackDealer@{CardGamesCSharp.BlackjackDealer}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Card\+Games\+CSharp.\+Blackjack\+Dealer.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the Blackjack\+Dealer\textquotesingle{}s hand in a string format. If this.\+reveal is true then show all cards in the dealer\textquotesingle{}s hand. Otherwise, only show one card in the returned string. 
+
+\begin{DoxyReturn}{Returns}
+The Blackjack\+Dealer object in string form. 
+\end{DoxyReturn}
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

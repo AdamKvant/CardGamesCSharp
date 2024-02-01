@@ -1,5 +1,10 @@
 \doxysection{Card\+Games\+CSharp.\+Blackjack\+Player Class Reference}
 \hypertarget{class_card_games_c_sharp_1_1_blackjack_player}{}\label{class_card_games_c_sharp_1_1_blackjack_player}\index{CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}}
+
+
+The Blackjack\+Player class inherits from the player class, and adds some additional Blackjack functionality.  
+
+
 Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+Player\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,15 +16,14 @@ Inheritance diagram for Card\+Games\+CSharp.\+Blackjack\+Player\+:\begin{figure}
 \item 
 \Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_a6177cdbf2d15f57eeeef2fe97289f420}\label{class_card_games_c_sharp_1_1_blackjack_player_a6177cdbf2d15f57eeeef2fe97289f420} 
 {\bfseries Blackjack\+Player} (int id)
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_a540de4b77729f6bd61ef68e9b977537e}\label{class_card_games_c_sharp_1_1_blackjack_player_a540de4b77729f6bd61ef68e9b977537e} 
-override string {\bfseries To\+String} ()
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_a262b52ec021d1f5dddff80e8ad3fa498}\label{class_card_games_c_sharp_1_1_blackjack_player_a262b52ec021d1f5dddff80e8ad3fa498} 
-short {\bfseries get\+Blackjack\+Hand\+Value} ()
-\item 
-\Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d9c99173fdb259fbe5daeb}\label{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d9c99173fdb259fbe5daeb} 
-void {\bfseries calculate\+Bj\+Hand\+Value} ()
+\begin{DoxyCompactList}\small\item\em The Blackjack\+Player\textquotesingle{}s constructor initializes the following variables\+: ~\newline
+ base.\+id is initialized to the integer passed in. ~\newline
+ this.\+blackjack\+Hand is initially set to 0. \end{DoxyCompactList}\item 
+override string \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player_a540de4b77729f6bd61ef68e9b977537e}{To\+String}} ()
+\begin{DoxyCompactList}\small\item\em To\+String Method is overridden, Blackjack\+Player id and hand is formatted into a string. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player_a262b52ec021d1f5dddff80e8ad3fa498}{get\+Blackjack\+Hand\+Value}} ()
+\begin{DoxyCompactList}\small\item\em Returns the blackjack\+Hand\+Value for the Blackjack\+Player. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d9c99173fdb259fbe5daeb}{calculate\+Bj\+Hand\+Value}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Card\+Games\+CSharp.\+Player}}}
 \begin{DoxyCompactItemize}
@@ -36,7 +40,7 @@ bool {\bfseries get\+Is\+Out} ()
 \item 
 void {\bfseries set\+Is\+Out} ()
 \item 
-override string {\bfseries To\+String} ()
+string {\bfseries To\+String} ()
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_card_games_c_sharp_1_1_player}{Card\+Games\+CSharp.\+Player}}}
@@ -48,6 +52,44 @@ List$<$ \mbox{\hyperlink{class_card_games_c_sharp_1_1_card}{Card}} $>$ {\bfserie
 \item 
 bool {\bfseries is\+Out}
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The Blackjack\+Player class inherits from the player class, and adds some additional Blackjack functionality. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d9c99173fdb259fbe5daeb}\label{class_card_games_c_sharp_1_1_blackjack_player_ac6af839421d9c99173fdb259fbe5daeb} 
+\index{CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}!calculateBjHandValue@{calculateBjHandValue}}
+\index{calculateBjHandValue@{calculateBjHandValue}!CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}}
+\doxysubsubsection{\texorpdfstring{calculateBjHandValue()}{calculateBjHandValue()}}
+{\footnotesize\ttfamily void Card\+Games\+CSharp.\+Blackjack\+Player.\+calculate\+Bj\+Hand\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Calculates the point value of the Blackjack\+Player\textquotesingle{}s hand. This function accounts for aces being 1 or 11 points. \Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_a262b52ec021d1f5dddff80e8ad3fa498}\label{class_card_games_c_sharp_1_1_blackjack_player_a262b52ec021d1f5dddff80e8ad3fa498} 
+\index{CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}!getBlackjackHandValue@{getBlackjackHandValue}}
+\index{getBlackjackHandValue@{getBlackjackHandValue}!CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}}
+\doxysubsubsection{\texorpdfstring{getBlackjackHandValue()}{getBlackjackHandValue()}}
+{\footnotesize\ttfamily short Card\+Games\+CSharp.\+Blackjack\+Player.\+get\+Blackjack\+Hand\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the blackjack\+Hand\+Value for the Blackjack\+Player. 
+
+\begin{DoxyReturn}{Returns}
+The blackjack\+Hand\+Value (short). 
+\end{DoxyReturn}
+\Hypertarget{class_card_games_c_sharp_1_1_blackjack_player_a540de4b77729f6bd61ef68e9b977537e}\label{class_card_games_c_sharp_1_1_blackjack_player_a540de4b77729f6bd61ef68e9b977537e} 
+\index{CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}!ToString@{ToString}}
+\index{ToString@{ToString}!CardGamesCSharp.BlackjackPlayer@{CardGamesCSharp.BlackjackPlayer}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily override string Card\+Games\+CSharp.\+Blackjack\+Player.\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To\+String Method is overridden, Blackjack\+Player id and hand is formatted into a string. 
+
+\begin{DoxyReturn}{Returns}
+The Blackjack\+Player in a string representation. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
