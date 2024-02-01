@@ -9,11 +9,12 @@ namespace CardGamesCSharp
     class BlackjackDealer : Dealer
 
     {
-        private Player dealer;
+        private BlackjackPlayer dealer;
         private List<Card> dealerHand;
         private bool reveal;
+        private BlackjackPlayer[] players;
 
-        public BlackjackDealer(Deck deck, Player[] players) : base(deck, players)
+        public BlackjackDealer(Deck deck, BlackjackPlayer[] players) : base(deck)
         {
             dealer = this.players[players.Length - 1];
             dealerHand = dealer.getHand();
