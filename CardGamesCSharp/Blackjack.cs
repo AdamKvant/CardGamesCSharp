@@ -50,7 +50,8 @@ namespace CardGamesCSharp
         }
 
         public override void run()
-        { bool continueHit = true;
+        {
+            bool continueHit = true;
             int result = -1;
             deck.Shuffle();
             Console.WriteLine("Dealing cards to players");
@@ -60,14 +61,16 @@ namespace CardGamesCSharp
             {
                 Console.WriteLine(player.ToString());
             }
-            for (int i = 0; i < 8; i++) {
+            for (int i = 0; i < 8; i++)
+            {
                 dispBuffer();
             }
-                for (int i = 0; i < this.players.Length - 1; i++)
+            for (int i = 0; i < this.players.Length - 1; i++)
+            {
+                continueHit = true;
+                players[i].calculateBjHandValue();
+                while (continueHit && players[i].getBlackjackHandValue() <= 21)
                 {
-                    continueHit = true;
-                    players[i].calculateBjHandValue();
-                    while (continueHit && players[i].getBlackjackHandValue() <= 21) { 
                     Console.WriteLine(dealer.ToString());
                     Console.WriteLine(this.players[i].ToString());
                     Console.WriteLine("Do you want to hit(0) or stay(1)?");
@@ -95,7 +98,7 @@ namespace CardGamesCSharp
                                 dealer.addCardToPlayer(this.players[i]);
                                 Console.WriteLine(this.players[i].ToString());
                                 players[i].calculateBjHandValue();
-                                }
+                            }
                             else if (int.TryParse(choice, out result) && result == 1)
                             {
                                 Console.WriteLine(this.players[i].ToString());
@@ -104,30 +107,33 @@ namespace CardGamesCSharp
                         }
                     }
                 }
-                    if (players[i].getBlackjackHandValue() > 21) {
-                        Console.WriteLine($"Player {i + 1} busts");
-                        players[i].setIsOut();
-                        dispBuffer();
-                    }
-                    else { 
-                        Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
-                        dispBuffer();
-                         }
+                if (players[i].getBlackjackHandValue() > 21)
+                {
+                    Console.WriteLine($"Player {i + 1} busts");
+                    players[i].setIsOut();
+                    dispBuffer();
                 }
+                else
+                {
+                    Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
+                    dispBuffer();
+                }
+            }
             dealer.updateReveal();
             Console.WriteLine("Dealer revealing cards:");
             Console.WriteLine(dealer);
             dealerPlayer.calculateBjHandValue();
-            while (dealerPlayer.getBlackjackHandValue() < 17) {
+            while (dealerPlayer.getBlackjackHandValue() < 17)
+            {
                 Console.WriteLine("Dealer is under 17, drawing another card");
                 dealer.addCardToPlayer(dealerPlayer);
                 Console.WriteLine(dealer);
                 dealerPlayer.calculateBjHandValue();
             }
-            
-            
-                
-            
+
+
+
+
 
         }
     }
