@@ -16,6 +16,7 @@ namespace CardGamesCSharp
 
         public BlackjackDealer(Deck deck, BlackjackPlayer[] players) : base(deck)
         {
+            this.players = players;
             dealer = this.players[players.Length - 1];
             dealerHand = dealer.getHand();
             reveal = false;
@@ -41,8 +42,9 @@ namespace CardGamesCSharp
             }
         }
         public List<Card> getHand() { return dealerHand; }
-        public void updateReveal() {
-        reveal = true;
+        public void updateReveal()
+        {
+            reveal = true;
         }
 
         /*public bool dealerBust() {

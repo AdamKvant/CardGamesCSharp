@@ -33,22 +33,6 @@ namespace CardGamesCSharp
             throw new NotImplementedException();
         }
 
-        private void verifyAllPlayers()
-        {
-            short count = 0;
-            foreach (Player player in players)
-            {
-                if (player.getIsOut())
-                {
-                    count++;
-                }
-            }
-            if (count == playerCount - 1)
-            {
-                allPlayersOut = true;
-            }
-        }
-
         public override void run()
         {
             bool continueHit = true;
@@ -61,10 +45,7 @@ namespace CardGamesCSharp
             {
                 Console.WriteLine(player.ToString());
             }
-            for (int i = 0; i < 8; i++)
-            {
-                dispBuffer();
-            }
+            dispBuffer(8);
             for (int i = 0; i < this.players.Length - 1; i++)
             {
                 continueHit = true;
@@ -111,12 +92,12 @@ namespace CardGamesCSharp
                 {
                     Console.WriteLine($"Player {i + 1} busts");
                     players[i].setIsOut();
-                    dispBuffer();
+                    dispBuffer(3);
                 }
                 else
                 {
                     Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
-                    dispBuffer();
+                    dispBuffer(3);
                 }
             }
             dealer.updateReveal();
@@ -130,6 +111,46 @@ namespace CardGamesCSharp
                 Console.WriteLine(dealer);
                 dealerPlayer.calculateBjHandValue();
             }
+            short dealerHandVal = dealerPlayer.getBlackjackHandValue();
+            if (dealerHandVal > 21)
+            {
+                Console.WriteLine("Dealer busts!");
+                foreach (BlackjackPlayer player in players)
+                {
+                    if (player.getIsOut())
+                    {
+                        Console.WriteLine($"Player {player.getId()} is still out :(");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Player {player.getId()} wins!");
+                    }
+                }
+            }
+            else
+            {
+                foreach (BlackjackPlayer player in this.players)
+                {
+                    if (!player.getIsOut() && player.getBlackjackHandValue() > dealerHandVal)
+                    {
+                        Console.WriteLine($"Player {player.getId()} wins!");
+                    }
+                    else if (!player.getIsOut() && player.getBlackjackHandValue() == dealerHandVal)
+                    {
+                        Console.WriteLine($"Player {player.getId()} tied the dealer!");
+                    }
+                    else if (!player.getIsOut() && player.getBlackjackHandValue() < dealerHandVal)
+                    {
+                        Console.WriteLine($"Player {player.getId()} loses :(");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Player {player.getId()} is still out :(");
+                    }
+
+                }
+            }
+
 
 
 
