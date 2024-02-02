@@ -138,14 +138,14 @@ namespace CardGamesCSharp
                 {
                     Console.WriteLine($"Player {i + 1} busts");
                     players[i].setIsOut();
-                    dispBuffer(100);
+                    dispBuffer(20);
                 }
 
                 //Otherwise, the player is notified that they are still in.
                 else
                 {
                     Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
-                    dispBuffer(100);
+                    dispBuffer(20);
                 }
             }
 
@@ -171,16 +171,16 @@ namespace CardGamesCSharp
             {
                 Console.WriteLine("Dealer busts!");
                 dispBuffer(1);
-                foreach (BlackjackPlayer player in players)
+                for (int i = 0; i < players.Length - 1; i++)
                 {
-                    player.calculateBjHandValue();
-                    if (player.getIsOut())
+                    players[i].calculateBjHandValue();
+                    if (players[i].getIsOut())
                     {
-                        Console.WriteLine($"Player {player.getId()} is still out :(");
+                        Console.WriteLine($"Player {players[i].getId()} is still out :(");
                     }
                     else
                     {
-                        Console.WriteLine($"Player {player.getId()} wins!");
+                        Console.WriteLine($"Player {players[i].getId()} wins!");
                     }
                 }
             }
@@ -188,24 +188,24 @@ namespace CardGamesCSharp
             //Otherwise, the dealer is still in, notify all players of their end-of-game status.
             else
             {
-                foreach (BlackjackPlayer player in this.players)
+                for (int i = 0; i < players.Length - 1; i++)
                 {
-                    player.calculateBjHandValue();
-                    if (!player.getIsOut() && player.getBlackjackHandValue() > dealerHandVal)
+                    players[i].calculateBjHandValue();
+                    if (!players[i].getIsOut() && players[i].getBlackjackHandValue() > dealerHandVal)
                     {
-                        Console.WriteLine($"Player {player.getId()} wins!");
+                        Console.WriteLine($"Player {players[i].getId()} wins!");
                     }
-                    else if (!player.getIsOut() && player.getBlackjackHandValue() == dealerHandVal)
+                    else if (!players[i].getIsOut() && players[i].getBlackjackHandValue() == dealerHandVal)
                     {
-                        Console.WriteLine($"Player {player.getId()} tied the dealer!");
+                        Console.WriteLine($"Player {players[i].getId()} tied the dealer!");
                     }
-                    else if (!player.getIsOut() && player.getBlackjackHandValue() < dealerHandVal)
+                    else if (!players[i].getIsOut() && players[i].getBlackjackHandValue() < dealerHandVal)
                     {
-                        Console.WriteLine($"Player {player.getId()} loses :(");
+                        Console.WriteLine($"Player {players[i].getId()} loses :(");
                     }
                     else
                     {
-                        Console.WriteLine($"Player {player.getId()} is still out :(");
+                        Console.WriteLine($"Player {players[i].getId()} is still out :(");
                     }
 
                 }
