@@ -73,9 +73,9 @@ namespace CardGamesCSharp
             //Add appropriate values for aces to player's score.
             for (int i = 0; i < aceCount; i++)
             {
-                if (blackjackHandValue + 10 <= 21)
+                if (blackjackHandValue + 11 <= 21)
                 {
-                    blackjackHandValue += 10;
+                    blackjackHandValue += 11;
                 }
                 else
                 {

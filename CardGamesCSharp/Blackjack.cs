@@ -73,7 +73,7 @@ namespace CardGamesCSharp
             }
 
             //Clear the terminal to prepare for the first player's turn.
-            dispBuffer(8);
+            dispBuffer(100);
 
             //Loop containing all logic for "hit" or "stay" for each player besides the dealer
             for (int i = 0; i < this.players.Length - 1; i++)
@@ -138,14 +138,14 @@ namespace CardGamesCSharp
                 {
                     Console.WriteLine($"Player {i + 1} busts");
                     players[i].setIsOut();
-                    dispBuffer(3);
+                    dispBuffer(100);
                 }
 
                 //Otherwise, the player is notified that they are still in.
                 else
                 {
                     Console.WriteLine($"Player {i + 1} is in with {players[i].getBlackjackHandValue()} points");
-                    dispBuffer(3);
+                    dispBuffer(100);
                 }
             }
 
@@ -170,6 +170,7 @@ namespace CardGamesCSharp
             if (dealerHandVal > 21)
             {
                 Console.WriteLine("Dealer busts!");
+                dispBuffer(1);
                 foreach (BlackjackPlayer player in players)
                 {
                     player.calculateBjHandValue();

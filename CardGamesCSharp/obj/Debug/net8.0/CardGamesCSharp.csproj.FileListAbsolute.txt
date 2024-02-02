@@ -27,3 +27,4 @@ C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\obj\Debug\n
 C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.pdb
 C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.genruntimeconfig.cache
 C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\ref\CardGamesCSharp.dll
+C:\Users\Adam Kvant\source\repos\CardGamesCSharp\CardGamesCSharp\obj\Debug\net8.0\CardGamesCSharp.sourcelink.json

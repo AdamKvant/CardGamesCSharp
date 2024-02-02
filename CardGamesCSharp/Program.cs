@@ -70,11 +70,7 @@ namespace CardGamesCSharp
 
             }
 
-
-
-
-
-            /* Test Code
+            /*Test Code
             Deck test = new Deck(2);
             Console.WriteLine(test);
             test.Shuffle();
@@ -85,7 +81,12 @@ namespace CardGamesCSharp
             Card[] test1 = new Card[2] {new Card('S',1),new Card('D',13)};
             p1.setHand(test1);
             Console.WriteLine();
-            Console.WriteLine(p1);*/
+            Console.WriteLine(p1);
+            BlackjackPlayer newP = new BlackjackPlayer(0);
+            newP.addCard(new Card('S', 1));
+            newP.calculateBjHandValue();
+            Console.WriteLine(newP.getBlackjackHandValue());*/
+
         }
     }
 }
