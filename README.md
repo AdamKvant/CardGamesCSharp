@@ -6,7 +6,7 @@ At this time, Blackjack is the only game fully implemented inside of CardGamesCS
 ## Documentation
 As mentioned above, the code is fully documented in Doxygen and can be found [here]. The code also has many other comments inside it to provide an easy understanding of what is going on. I have also created a UML class diagram for the current version (Beta-1.0).
 
-![UML clas diagram of current release]()
+![UML class diagram of current release](https://github.com/AdamKvant/CardGamesCSharp/blob/main/CardGamesCSharp/images/C%23%20CardGames.png)
 
 ## Changelog
 Version Beta-1.0: Core Blackjack functionality created, alongside the extendable CardGames platform.
