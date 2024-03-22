@@ -1,5 +1,0 @@
-C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\bin\Release\net8.0\publish\CardGamesCSharp.exe
-C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\bin\Release\net8.0\publish\CardGamesCSharp.dll
-C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\bin\Release\net8.0\publish\CardGamesCSharp.deps.json
-C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\bin\Release\net8.0\publish\CardGamesCSharp.runtimeconfig.json
-C:\Users\ajkva\OneDrive\Desktop\Code\CardGamesCSharp\CardGamesCSharp\bin\Release\net8.0\publish\CardGamesCSharp.pdb
