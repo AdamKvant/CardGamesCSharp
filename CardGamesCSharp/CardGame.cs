@@ -41,6 +41,14 @@ namespace CardGamesCSharp
         }
 
         /**
+        * @brief The function clear clears the C# terminal.
+        */
+        public static void clear()
+        {
+            Console.Clear();
+        }
+
+        /**
          * @brief The run function is declared in subclasses of CardGame.
          * The main game logic for each game happens in the run function.
          */
