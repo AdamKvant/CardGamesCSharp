@@ -13,7 +13,7 @@ jobs:
       - name: Install and Build 🔧
         run: |
           # gem install bundler
-          # bundle install 
+          # bundle install
           # bundle exec jekyll build
 
       - name: Deploy 🚀
