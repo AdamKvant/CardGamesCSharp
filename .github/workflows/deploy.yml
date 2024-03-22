@@ -1,4 +1,7 @@
 name: Build and Deploy
+defaults:
+    run:
+      working-directory: ./docs/html
 on:
   push:
     branches:
