@@ -1,6 +1,6 @@
 name: Build and Deploy
 defaults:
-    run:
+    run: 
       working-directory: ./docs/html
 on:
   push:
