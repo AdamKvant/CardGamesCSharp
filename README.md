@@ -9,4 +9,4 @@ As mentioned above, the code is fully documented in Doxygen and can be found [he
 ![UML class diagram of current release](https://github.com/AdamKvant/CardGamesCSharp/blob/main/CardGamesCSharp/images/C%23%20CardGames.png)
 
 ## Changelog
-Version Beta-1.0: Core Blackjack functionality created, alongside the extendable CardGames platform. 
+Version Beta-1.0: Core Blackjack functionality created, alongside the extendable CardGames platform.
