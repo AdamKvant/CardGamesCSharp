@@ -69,5 +69,12 @@ namespace CardGamesCSharp
          */
         public abstract string ToString();
 
+        /**
+         * @brief Clears player's hand.
+         */
+        public void clearHand() {
+            this.hand.Clear();
+        }
+
     }
 }

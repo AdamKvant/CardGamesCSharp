@@ -95,6 +95,14 @@ namespace CardGamesCSharp
         }
 
         /**
+         * @brief Returns the total number of 52-Card decks in the Deck.
+         * @return An an integer representing the total number of 52-Card decks in the Deck.
+         */
+        public int getDeckCount() {
+            return deckCount;
+        }
+
+        /**
          * @brief The ToString for a Deck object.
          * Each row in the string is a specific suit.
          * @return The Deck in a string representation.

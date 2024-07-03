@@ -33,5 +33,22 @@
          * @brief The addCardToPlayer method is configured in a Dealer subclass to give a card to the passed in player.
          */
         abstract public void addCardToPlayer(Player player);
+
+        /**
+         * @brief Returns the currentCard variable.
+         * @return An int representing the current card in the deck
+         */
+        public int returnCurrentCardNum()
+        {
+            return currentCard;
+        }
+
+        /**
+         * @brief Resets the currentCard value to 0.
+         */
+        public void resetCurrentCardNum() { 
+            currentCard = 0;
+        }
     }
+
 }

@@ -20,6 +20,12 @@ namespace CardGamesCSharp
         private bool reveal;
         //All players in the Blackjack game.
         private BlackjackPlayer[] players;
+        // Remaining number of decks in play.
+        private int decksInPlay;
+        // Card count.
+        private short cardCount;
+        // True card count.
+        private short trueCardCount;
 
         /**
          * @brief Constructor for the BlackjackDealer class, all class variables initialized: <br>
@@ -37,6 +43,9 @@ namespace CardGamesCSharp
             dealer = this.players[players.Length - 1];
             dealerHand = dealer.getHand();
             reveal = false;
+            decksInPlay = deck.getDeckCount() - (currentCard / 52);
+            cardCount = 0;
+            trueCardCount = 0;
         }
 
         /**
@@ -45,8 +54,17 @@ namespace CardGamesCSharp
          */
         public override void addCardToPlayer(Player player)
         {
+
+            if (currentCard >= deck.getDeckCount() * 52) { 
+                deck.Shuffle();
+                currentCard = 0;
+                cardCount = 0;
+            }
+
             player.addCard(deck.GetCard(currentCard));
+            alterCount(this.deck.GetCard(currentCard).getValue());
             currentCard++;
+            decksInPlay = deck.getDeckCount() - (currentCard / 52);
         }
 
         /**
@@ -56,13 +74,29 @@ namespace CardGamesCSharp
         {
             foreach (Player player in players)
             {
+                if (currentCard >= deck.getDeckCount() * 52)
+                {
+                    deck.Shuffle();
+                    currentCard = 0;
+                    cardCount = 0;
+                }
                 player.addCard(this.deck.GetCard(currentCard));
+                alterCount(this.deck.GetCard(currentCard).getValue());
                 currentCard++;
+                decksInPlay = deck.getDeckCount() - (currentCard / 52);
             }
             foreach (Player player in players)
             {
+                if (currentCard >= deck.getDeckCount() * 52)
+                {
+                    deck.Shuffle();
+                    currentCard = 0;
+                    cardCount = 0;
+                }
                 player.addCard(this.deck.GetCard(currentCard));
+                alterCount(this.deck.GetCard(currentCard).getValue());
                 currentCard++;
+                decksInPlay = deck.getDeckCount() - (currentCard / 52);
             }
         }
 
@@ -102,9 +136,28 @@ namespace CardGamesCSharp
                 str += dealerHand[0].getRepresentation() + " ";
                 str += "\n";
             }
+            str += $"Card Count: {cardCount} \n";
+            str += $"True Card Count: {trueCardCount} \n";
 
             return str;
 
+        }
+
+
+        /**
+         * @brief Updates the card count (true and normal) when the function is called.
+         * @param value The value of the Card.
+         */
+        private void alterCount(int value)
+        {
+            if (value >= 2 && value <= 6)
+            {
+                cardCount++;
+            }
+            else if (value == 1 || (value >= 10 && value <= 13)) { 
+                cardCount--;
+            }
+            trueCardCount = (short) (cardCount /  decksInPlay);
         }
 
     }
