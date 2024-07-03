@@ -62,6 +62,17 @@ namespace CardGamesCSharp
                     player.clearHand();
                 }
 
+                Random r = new Random();
+                Console.WriteLine($"Current num: {dealer.returnCurrentCardNum()}");
+                if (dealer.returnCurrentCardNum() >= deck.getDeckCount() * r.NextInt64(1, 50))
+                {
+                    Console.WriteLine("Dealer is reshuffling deck.");
+                    dealer.resetCurrentCardNum();
+                    dealer.resetCardCount();
+                    deck.Shuffle();
+                    
+                }
+
                 //Every player can continue to hit on their turn by default.
                 bool continueHit = true;
 
@@ -162,6 +173,7 @@ namespace CardGamesCSharp
                 //Update the revealed status for the dealer to be able to see their full hand.
                 dealer.updateReveal();
                 Console.WriteLine("Dealer revealing cards:");
+                dealer.alterCount(dealer.getHand()[1].getValue());
                 Console.WriteLine(dealer);
                 dealerPlayer.calculateBjHandValue();
 

@@ -54,13 +54,6 @@ namespace CardGamesCSharp
          */
         public override void addCardToPlayer(Player player)
         {
-
-            if (currentCard >= deck.getDeckCount() * 52) { 
-                deck.Shuffle();
-                currentCard = 0;
-                cardCount = 0;
-            }
-
             player.addCard(deck.GetCard(currentCard));
             alterCount(this.deck.GetCard(currentCard).getValue());
             currentCard++;
@@ -74,27 +67,17 @@ namespace CardGamesCSharp
         {
             foreach (Player player in players)
             {
-                if (currentCard >= deck.getDeckCount() * 52)
-                {
-                    deck.Shuffle();
-                    currentCard = 0;
-                    cardCount = 0;
-                }
                 player.addCard(this.deck.GetCard(currentCard));
                 alterCount(this.deck.GetCard(currentCard).getValue());
                 currentCard++;
                 decksInPlay = deck.getDeckCount() - (currentCard / 52);
             }
-            foreach (Player player in players)
+            for (int i = 0; i < players.Length; i++)
             {
-                if (currentCard >= deck.getDeckCount() * 52)
-                {
-                    deck.Shuffle();
-                    currentCard = 0;
-                    cardCount = 0;
+                players[i].addCard(this.deck.GetCard(currentCard));
+                if (i != players.Length - 1) {
+                    alterCount(this.deck.GetCard(currentCard).getValue());
                 }
-                player.addCard(this.deck.GetCard(currentCard));
-                alterCount(this.deck.GetCard(currentCard).getValue());
                 currentCard++;
                 decksInPlay = deck.getDeckCount() - (currentCard / 52);
             }
@@ -148,16 +131,27 @@ namespace CardGamesCSharp
          * @brief Updates the card count (true and normal) when the function is called.
          * @param value The value of the Card.
          */
-        private void alterCount(int value)
+        public void alterCount(int value)
         {
             if (value >= 2 && value <= 6)
             {
                 cardCount++;
             }
-            else if (value == 1 || (value >= 10 && value <= 13)) { 
+            else if (value == 1 || (value >= 10 && value <= 13))
+            {
                 cardCount--;
             }
-            trueCardCount = (short) (cardCount /  decksInPlay);
+
+            trueCardCount = (short)(cardCount / decksInPlay);
+        }
+
+        /**
+         * @brief Resets cardCount and trueCardCount.
+         */
+        public void resetCardCount()
+        {
+            cardCount = 0;
+            trueCardCount = 0;
         }
 
     }
